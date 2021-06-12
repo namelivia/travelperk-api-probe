@@ -1,0 +1,12 @@
+{
+    "require": {
+        "php": "^7.3",
+        "namelivia/travelperk-http-php": "^1.4.0",
+        "kamermans/guzzle-oauth2-subscriber": "^1.0"
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

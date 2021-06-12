@@ -1,0 +1,19 @@
+version: '3'
+services:
+
+  php-probe:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-probe
+    tty: false
+    working_dir: /usr/src/app
+    environment:
+      API_KEY: ${API_KEY}
+    volumes:
+      - ./:/usr/src/app
+      - vendor:/usr/src/app/vendor
+    command: ["/bin/sh","run"]
+
+volumes:
+  vendor:

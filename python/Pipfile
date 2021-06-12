@@ -1,0 +1,14 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
+
+[packages]
+travelperk-python-api-types = {editable = true, ref = "master", git = "https://github.com/namelivia/travelperk-python-api-types.git"}
+travelperk-http-python = {editable = true, ref = "master", git = "https://github.com/namelivia/travelperk-http-python.git"}
