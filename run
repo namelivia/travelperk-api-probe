@@ -2,5 +2,12 @@
 if [ -f .env ]; then
   export $(cat .env | xargs)
 fi
-(cd python && docker-compose up --build)
-(cd php && docker-compose up --build)
+echo 'Cleaning output folders'
+rm -f python/output/*
+rm -f php/output/*
+echo 'Running python probe'
+(cd python && docker-compose build -q && docker-compose up)
+echo 'Running php probe'
+(cd php && docker-compose build -q && docker-compose up)
+echo 'Comparing results'
+diff -arq python/output php/output

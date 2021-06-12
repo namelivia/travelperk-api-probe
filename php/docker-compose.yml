@@ -13,9 +13,8 @@ services:
     volumes:
       - ./:/usr/src/app
       - vendor:/usr/src/app/vendor
-      - output:/usr/src/app/output
+      - ./output:/usr/src/app/output
     command: ["/bin/sh","run"]
 
 volumes:
   vendor:
-  output:
