@@ -1,2 +1,3 @@
 #!/bin/bash
 pipenv run python ./scripts/cost_centers.py
+pipenv run python ./scripts/cost_center.py
