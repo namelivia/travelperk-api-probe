@@ -8,8 +8,8 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
 
 ### TravelSafe
  - Get travel restrictions [python](https://github.com/namelivia/travelperk-http-python/wiki/TravelSafe#get-travel-restrictions) [php](https://github.com/namelivia/travelperk-http-php/wiki/TravelSafe#get-travel-restrictions)
- - Get local summary (pending)
- - Get airline safety measures (pending)
+ - Get local summary [python](https://github.com/namelivia/travelperk-http-python/wiki/TravelSafe#get-local-summary) [php](https://github.com/namelivia/travelperk-http-php/wiki/TravelSafe#get-local-summary)
+ - Get airline safety measures [python](https://github.com/namelivia/travelperk-http-python/wiki/TravelSafe#get-airline-safety-measures) [php](https://github.com/namelivia/travelperk-http-php/wiki/TravelSafe#get-airline-safety-measures)
  - Get location types (pending)
 
 ### Cost Centers

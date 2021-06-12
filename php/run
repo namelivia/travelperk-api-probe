@@ -1,5 +1,7 @@
 #!/bin/bash
 php ./scripts/get_travel_restrictions.php
+php ./scripts/get_local_summary.php
+php ./scripts/get_safety_measures.php
 php ./scripts/cost_centers.php
 php ./scripts/cost_center.php
 php ./scripts/users.php
