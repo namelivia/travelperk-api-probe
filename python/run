@@ -2,3 +2,4 @@
 pipenv run python ./scripts/cost_centers.py
 pipenv run python ./scripts/cost_center.py
 pipenv run python ./scripts/users.py
+pipenv run python ./scripts/get_travel_restrictions.py
