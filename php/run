@@ -1,3 +1,4 @@
 #!/bin/bash
 php ./scripts/cost_centers.php
 php ./scripts/cost_center.php
+php ./scripts/users.php
