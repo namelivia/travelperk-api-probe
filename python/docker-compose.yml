@@ -12,4 +12,8 @@ services:
       API_KEY: ${API_KEY}
     volumes:
       - ./:/app
+      - output:/app/output
     command: ["/bin/sh","run"]
+
+volumes:
+  output:

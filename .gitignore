@@ -1,2 +1,6 @@
 tags
 .env
+python/output/*
+php/output/*
+!python/output/.gitkeep
+!php/output/.gitkeep
