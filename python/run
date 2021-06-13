@@ -1,6 +1,5 @@
 #!/bin/bash
-#TODO: This one may need a fix
-#pipenv run python ./scripts/get_travel_restrictions.py
+pipenv run python ./scripts/get_travel_restrictions.py
 #TODO: This one may need a fix
 #pipenv run python ./scripts/get_local_summary.py
 pipenv run python ./scripts/get_safety_measures.py

@@ -34,8 +34,5 @@ write_output("travel_restrictions", [
 	$restriction->requirements[0]->details,
 	$restriction->requirements[0]->startDate,
 	$restriction->requirements[0]->endDate,
-	$restriction->requirements[0]->documents,
-	$restriction->requirements[0]->documents[0]->name,
-	$restriction->requirements[0]->documents[0]->documentUrl,
-	$restriction->requirements[0]->documents[0]->downloadUrl,
+	count($restriction->requirements[0]->documents),
 ]);

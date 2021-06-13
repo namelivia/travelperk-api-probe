@@ -29,7 +29,4 @@ write_output("travel_restrictions", [
     restriction.requirements[0].start_date,
     restriction.requirements[0].end_date,
     len(restriction.requirements[0].documents),
-    restriction.requirements[0].documents[0].name,
-    restriction.requirements[0].documents[0].document_url,
-    restriction.requirements[0].documents[0].download_url,
 ])
