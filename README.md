@@ -21,7 +21,7 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
  
 ### Trips
  - List trips [python](https://github.com/namelivia/travelperk-http-python/wiki/Trips#list-all-trips) [php](https://github.com/namelivia/travelperk-http-php/wiki/Trips#list-all-trips)
- - List bookings (pending)
+ - List bookings [python](https://github.com/namelivia/travelperk-http-python/wiki/Trips#list-all-bookings) [php](https://github.com/namelivia/travelperk-http-php/wiki/Trips#list-all-bookings)
 
 ### Users (non SCIM)
  - List users [python](https://github.com/namelivia/travelperk-http-python/wiki/Users-(non-SCIM)#list-all-users) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users-(non-SCIM)#list-all-users)
