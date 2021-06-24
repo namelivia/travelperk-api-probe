@@ -6,6 +6,15 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
 
 ## Operations included on the probe
 
+### SCIM
+
+#### Discovery
+ - Service provider configuration [python](https://github.com/namelivia/travelperk-http-python/wiki/Discovery#service-provider-configuration) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#list-all-webhook://github.com/namelivia/travelperk-http-php/wiki/Discovery#service-provider-configuration)
+ - List resource types [python](https://github.com/namelivia/travelperk-http-python/wiki/Discovery#list-resource-types) [php](https://github.com/namelivia/travelperk-http-php/wiki/Discovery#list-resource-types)
+ - List all schemas [python](https://github.com/namelivia/travelperk-http-python/wiki/Discovery#list-all-schemas) [php](https://github.com/namelivia/travelperk-http-php/wiki/Discovery#list-all-schemas)
+ - User schema details [python](https://github.com/namelivia/travelperk-http-python/wiki/Discovery#user-schema-details) [php](https://github.com/namelivia/travelperk-http-php/wiki/Discovery#user-schema-details)
+ - Enterprise user schema details [python](https://github.com/namelivia/travelperk-http-python/wiki/Discovery#enterprise-user-schema-details) [php](https://github.com/namelivia/travelperk-http-php/wiki/Discovery#enterprise-user-schema-details)
+
 ### Webhooks
  - List all webhooks [python](https://github.com/namelivia/travelperk-http-python/wiki/Webhooks#list-all-webhooks) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#list-all-webhooks)
  - Create a webhook (pending)

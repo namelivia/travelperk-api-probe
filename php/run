@@ -21,3 +21,13 @@ echo "Get webhook"
 php ./scripts/webhook.php
 echo "Test webhook"
 php ./scripts/test_webhook.php
+echo "Service provider config"
+php ./scripts/service_provider_config.php
+echo "List resource types"
+php ./scripts/list_resource_types.php
+echo "List all schemas"
+php ./scripts/schemas.php
+echo "User schema details"
+php ./scripts/user_schema.php
+echo "Enterprise user schema details"
+php ./scripts/enterprise_schema.php

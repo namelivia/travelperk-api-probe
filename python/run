@@ -21,3 +21,13 @@ echo "Get webhook"
 pipenv run python ./scripts/webhook.py
 echo "Test webhook"
 pipenv run python ./scripts/test_webhook.py
+echo "Service provider config"
+pipenv run python ./scripts/service_provider_config.py
+echo "List resource types"
+pipenv run python ./scripts/list_resource_types.py
+echo "List all schemas"
+pipenv run python ./scripts/schemas.py
+echo "User schema details"
+pipenv run python ./scripts/user_schema.py
+echo "Enterprise user schema details"
+pipenv run python ./scripts/enterprise_schema.py
