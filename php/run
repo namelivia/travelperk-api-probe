@@ -7,3 +7,4 @@ php ./scripts/cost_center.php
 php ./scripts/users.php
 php ./scripts/list_trips.php
 php ./scripts/list_bookings.php
+php ./scripts/webhooks.php

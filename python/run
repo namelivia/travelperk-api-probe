@@ -7,3 +7,4 @@ pipenv run python ./scripts/cost_center.py
 pipenv run python ./scripts/users.py
 pipenv run python ./scripts/list_trips.py
 pipenv run python ./scripts/list_bookings.py
+pipenv run python ./scripts/webhooks.py

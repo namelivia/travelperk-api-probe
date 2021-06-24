@@ -6,6 +6,14 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
 
 ## Operations included on the probe
 
+### Webhooks
+ - List all webhooks [python](https://github.com/namelivia/travelperk-http-python/wiki/Webhooks#list-all-webhooks) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#list-all-webhooks)
+ - Create a webhook (pending)
+ - Retrieve a webhook (pending)
+ - Update a webhook (pending)
+ - Test a webhook (pending)
+ - Delete a webhook (pending)
+
 ### TravelSafe
  - Get travel restrictions [python](https://github.com/namelivia/travelperk-http-python/wiki/TravelSafe#get-travel-restrictions) [php](https://github.com/namelivia/travelperk-http-php/wiki/TravelSafe#get-travel-restrictions)
  - Get local summary [python](https://github.com/namelivia/travelperk-http-python/wiki/TravelSafe#get-local-summary) [php](https://github.com/namelivia/travelperk-http-php/wiki/TravelSafe#get-local-summary)

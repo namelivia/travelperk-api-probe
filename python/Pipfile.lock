@@ -95,12 +95,12 @@
         "travelperk-http-python": {
             "editable": true,
             "git": "https://github.com/namelivia/travelperk-http-python.git",
-            "ref": "976c1be08dd2a71fd8e58c14989ede8dc58f0a13"
+            "ref": "b6f40a53304076c7d7f69dd217e02884a95fdc2f"
         },
         "travelperk-python-api-types": {
             "editable": true,
             "git": "https://github.com/namelivia/travelperk-python-api-types.git",
-            "ref": "0391aa8312c8a1fedbf3107703b56685ddc1634d"
+            "ref": "952a29e685a181577380c22cef5abb42a257383b"
         },
         "typing-extensions": {
             "hashes": [
