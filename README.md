@@ -9,7 +9,7 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
 ### Webhooks
  - List all webhooks [python](https://github.com/namelivia/travelperk-http-python/wiki/Webhooks#list-all-webhooks) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#list-all-webhooks)
  - Create a webhook (pending)
- - Retrieve a webhook (pending)
+ - Retrieve a webhook [python](https://github.com/namelivia/travelperk-http-python/wiki/Webhooks#retrieve-a-webhook) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#retrieve-a-webhook)
  - Update a webhook (pending)
  - Test a webhook (pending)
  - Delete a webhook (pending)

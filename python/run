@@ -8,3 +8,4 @@ pipenv run python ./scripts/users.py
 pipenv run python ./scripts/list_trips.py
 pipenv run python ./scripts/list_bookings.py
 pipenv run python ./scripts/webhooks.py
+pipenv run python ./scripts/webhook.py
