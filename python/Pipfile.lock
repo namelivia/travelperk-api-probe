@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e68ea7ea620059e613fb533385a0ce9d2fbc81ecdaa4b4c00b60fc7e455da8cd"
+            "sha256": "56ab4dee22036be8d3aa7b800fa9ebc6261e222612ade20e6c91930c6e36a124"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -95,12 +95,12 @@
         "travelperk-http-python": {
             "editable": true,
             "git": "https://github.com/namelivia/travelperk-http-python.git",
-            "ref": "3eb5b38efa117929d2c851e0e6063aae7208171f"
+            "ref": "976c1be08dd2a71fd8e58c14989ede8dc58f0a13"
         },
         "travelperk-python-api-types": {
             "editable": true,
             "git": "https://github.com/namelivia/travelperk-python-api-types.git",
-            "ref": "09190efa18904da4d6aecfd97bd5a5016cfe4094"
+            "ref": "0391aa8312c8a1fedbf3107703b56685ddc1634d"
         },
         "typing-extensions": {
             "hashes": [
@@ -118,5 +118,40 @@
             "version": "==1.26.5"
         }
     },
-    "develop": {}
+    "develop": {
+        "jedi": {
+            "hashes": [
+                "sha256:18456d83f65f400ab0c2d3319e48520420ef43b23a086fdc05dff34132f0fb93",
+                "sha256:92550a404bad8afed881a137ec9a461fed49eca661414be45059329614ed0707"
+            ],
+            "version": "==0.18.0"
+        },
+        "parso": {
+            "hashes": [
+                "sha256:12b83492c6239ce32ff5eed6d3639d6a536170723c6f3f1506869f1ace413398",
+                "sha256:a8c4922db71e4fdb90e0d0bc6e50f9b273d3397925e5e60a717e719201778d22"
+            ],
+            "version": "==0.8.2"
+        },
+        "pudb": {
+            "hashes": [
+                "sha256:309ee82b45a0ffca0bc4c7f521fd3e357589c764f339bdf9dcabb7ad40692d6e"
+            ],
+            "index": "pypi",
+            "version": "==2021.1"
+        },
+        "pygments": {
+            "hashes": [
+                "sha256:a18f47b506a429f6f4b9df81bb02beab9ca21d0a5fee38ed15aef65f0545519f",
+                "sha256:d66e804411278594d764fc69ec36ec13d9ae9147193a1740cd34d272ca383b8e"
+            ],
+            "version": "==2.9.0"
+        },
+        "urwid": {
+            "hashes": [
+                "sha256:588bee9c1cb208d0906a9f73c613d2bd32c3ed3702012f51efe318a3f2127eae"
+            ],
+            "version": "==2.1.2"
+        }
+    }
 }

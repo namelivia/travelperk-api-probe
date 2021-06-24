@@ -10,5 +10,8 @@ python_version = "3.8"
 allow_prereleases = true
 
 [packages]
-travelperk-python-api-types = {editable = true, ref = "master", git = "https://github.com/namelivia/travelperk-python-api-types.git"}
-travelperk-http-python = {editable = true, ref = "master", git = "https://github.com/namelivia/travelperk-http-python.git"}
+travelperk-python-api-types = {editable = true,ref = "master",git = "https://github.com/namelivia/travelperk-python-api-types.git"}
+travelperk-http-python = {editable = true,ref = "master",git = "https://github.com/namelivia/travelperk-http-python.git"}
+
+[dev-packages]
+pudb = "*"

@@ -13,4 +13,6 @@ services:
     volumes:
       - ./:/app
       - ./output:/app/output
+    ports:
+      - "4444:4444"
     command: ["/bin/sh","run"]

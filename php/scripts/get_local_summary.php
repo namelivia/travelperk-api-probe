@@ -26,6 +26,4 @@ write_output("local_summary", [
 	$restriction->guidelines[0]->summary,
 	$restriction->guidelines[0]->details,
 	$restriction->guidelines[0]->severity,
-	$restriction->infoSource->name,
-	$restriction->infoSource->url,
 ]);
