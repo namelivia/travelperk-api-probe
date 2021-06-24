@@ -1,11 +1,23 @@
 #!/bin/bash
+echo "Get travel restrictions"
 php ./scripts/get_travel_restrictions.php
+echo "Get local summary"
 php ./scripts/get_local_summary.php
+echo "Get safety measures"
 php ./scripts/get_safety_measures.php
+echo "List cost centers"
 php ./scripts/cost_centers.php
+echo "Get cost center"
 php ./scripts/cost_center.php
+echo "List users"
 php ./scripts/users.php
+echo "List trips"
 php ./scripts/list_trips.php
+echo "List bookings"
 php ./scripts/list_bookings.php
+echo "List webhooks"
 php ./scripts/webhooks.php
+echo "Get webhook"
 php ./scripts/webhook.php
+echo "Test webhook"
+php ./scripts/test_webhook.php

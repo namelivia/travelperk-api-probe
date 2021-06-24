@@ -11,7 +11,7 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
  - Create a webhook (pending)
  - Retrieve a webhook [python](https://github.com/namelivia/travelperk-http-python/wiki/Webhooks#retrieve-a-webhook) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#retrieve-a-webhook)
  - Update a webhook (pending)
- - Test a webhook (pending)
+ - Test a webhook [python](https://github.com/namelivia/travelperk-http-python/wiki/Webhooks#test-a-webhook) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#test-a-webhook)
  - Delete a webhook (pending)
 
 ### TravelSafe

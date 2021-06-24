@@ -1,11 +1,23 @@
 #!/bin/bash
+echo "Get travel restrictions"
 pipenv run python ./scripts/get_travel_restrictions.py
+echo "Get local summary"
 pipenv run python ./scripts/get_local_summary.py
+echo "Get safety measures"
 pipenv run python ./scripts/get_safety_measures.py
+echo "List cost centers"
 pipenv run python ./scripts/cost_centers.py
+echo "Get cost center"
 pipenv run python ./scripts/cost_center.py
+echo "List users"
 pipenv run python ./scripts/users.py
+echo "List trips"
 pipenv run python ./scripts/list_trips.py
+echo "List bookings"
 pipenv run python ./scripts/list_bookings.py
+echo "List webhooks"
 pipenv run python ./scripts/webhooks.py
+echo "Get webhook"
 pipenv run python ./scripts/webhook.py
+echo "Test webhook"
+pipenv run python ./scripts/test_webhook.py
