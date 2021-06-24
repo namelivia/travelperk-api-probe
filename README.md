@@ -20,7 +20,7 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
  - Set users to a cost center (pending) 
  
 ### Trips
- - List trips (pending)
+ - List trips [python](https://github.com/namelivia/travelperk-http-python/wiki/Trips#list-all-trips) [php](https://github.com/namelivia/travelperk-http-php/wiki/Trips#list-all-trips)
  - List bookings (pending)
 
 ### Users (non SCIM)

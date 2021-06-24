@@ -5,3 +5,4 @@ pipenv run python ./scripts/get_safety_measures.py
 pipenv run python ./scripts/cost_centers.py
 pipenv run python ./scripts/cost_center.py
 pipenv run python ./scripts/users.py
+pipenv run python ./scripts/list_trips.py

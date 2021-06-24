@@ -5,3 +5,4 @@ php ./scripts/get_safety_measures.php
 php ./scripts/cost_centers.php
 php ./scripts/cost_center.php
 php ./scripts/users.php
+php ./scripts/list_trips.php
