@@ -6,7 +6,29 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
 
 ## Operations included on the probe
 
+### Expenses
+
+#### Invoices
+
+ - List all invoices (pending)
+ - Retrieve an invoice (pending)
+ - Retrieve invoice PDF (pending)
+ - List all invoice lines (pending)
+ - Get billing periods (pending)
+ - Get statuses (pending)
+ - Get sorting values (pending)
+
+#### Invoice Profiles
+ - List all invoice profiles (pending)
+
 ### SCIM
+ - List users (pending)
+ - Create a new user (pending)
+ - Retrieve a user (pending)
+ - Replace a user (pending)
+ - Delete a user (pending)
+ - Get genders (pending)
+ - Get languages (pending)
 
 #### Discovery
  - Service provider configuration [python](https://github.com/namelivia/travelperk-http-python/wiki/Discovery#service-provider-configuration) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#list-all-webhook://github.com/namelivia/travelperk-http-php/wiki/Discovery#service-provider-configuration)

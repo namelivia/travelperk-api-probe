@@ -31,3 +31,7 @@ echo "User schema details"
 php ./scripts/user_schema.php
 echo "Enterprise user schema details"
 php ./scripts/enterprise_schema.php
+echo "List users (scim)"
+php ./scripts/list_scim.php
+echo "Get users"
+php ./scripts/get_user.php
