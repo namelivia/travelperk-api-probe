@@ -34,5 +34,5 @@ write_output("invoices", [
     invoices.invoices[0].travelperk_bank_account.account_number,
     invoices.invoices[0].travelperk_bank_account.bic,
     invoices.invoices[0].travelperk_bank_account.reference,
-    invoices.invoices[0].pdf,
+    invoices.invoices[0].pdf[0:40]  # This link will change every time
 ])

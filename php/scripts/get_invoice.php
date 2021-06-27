@@ -30,7 +30,7 @@ write_output("invoice", [
 	$invoice->travelperkBankAccount->accountNumber,
 	$invoice->travelperkBankAccount->bic,
 	$invoice->travelperkBankAccount->reference,
-	$invoice->pdf,
+	substr($invoice->pdf, 0, 40), # This link will change every time
 	$invoice->lines->total,
 	count($invoice->lines->data),
 	$invoice->lines->data[0]->expenseDate,
@@ -61,12 +61,4 @@ write_output("invoice", [
 	$invoice->lines->data[0]->metadata->booker->name,
 	$invoice->lines->data[0]->metadata->booker->email,
 	$invoice->lines->data[0]->metadata->booker->externalId,
-	$invoice->lines->data[0]->invoiceSerialNumber,
-	$invoice->lines->data[0]->profileId,
-	$invoice->lines->data[0]->profileName,
-	$invoice->lines->data[0]->invoiceMode,
-	$invoice->lines->data[0]->invoiceStatus,
-	$invoice->lines->data[0]->issuingDate,
-	$invoice->lines->data[0]->dueDate,
-	$invoice->lines->data[0]->currency,
 ]);

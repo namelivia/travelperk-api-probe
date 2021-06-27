@@ -29,7 +29,7 @@ write_output("invoice", [
     invoice.travelperk_bank_account.account_number,
     invoice.travelperk_bank_account.bic,
     invoice.travelperk_bank_account.reference,
-    invoice.pdf,
+    invoice.pdf[0:40],  # This link will change every time
     invoice.lines.total,
     len(invoice.lines.data),
     invoice.lines.data[0].expense_date,

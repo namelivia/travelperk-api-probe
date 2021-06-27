@@ -35,5 +35,5 @@ write_output("invoices", [
 	$invoices->invoices[0]->travelperkBankAccount->accountNumber,
 	$invoices->invoices[0]->travelperkBankAccount->bic,
 	$invoices->invoices[0]->travelperkBankAccount->reference,
-	$invoices->invoices[0]->pdf,
+	substr($invoices->invoices[0]->pdf, 0, 40) # This link will change every time
 ]);

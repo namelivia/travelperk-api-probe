@@ -10,8 +10,8 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
 
 #### Invoices
 
- - List all invoices (pending)
- - Retrieve an invoice (pending)
+ - List all invoices [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#list-all-invoices) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#list-all-invoices)
+ - Retrieve an invoice [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#retrieve-an-invoice) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#retrieve-an-invoice)
  - Retrieve invoice PDF (pending)
  - List all invoice lines [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#list-all-invoice-lines) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#list-all-invoice-lines)
  - Get billing periods (pending)
