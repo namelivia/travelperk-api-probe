@@ -35,3 +35,5 @@ echo "List users (scim)"
 php ./scripts/list_scim.php
 echo "Get users"
 php ./scripts/get_user.php
+echo "List invoice profiles"
+php ./scripts/list_invoice_profiles.php

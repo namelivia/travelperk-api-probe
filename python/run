@@ -35,3 +35,5 @@ echo "List users (scim)"
 pipenv run python ./scripts/list_scim.py
 echo "Get user"
 pipenv run python ./scripts/get_user.py
+echo "List invoice profiles"
+pipenv run python ./scripts/list_invoice_profiles.py
