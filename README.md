@@ -19,7 +19,7 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
  - Get sorting values (pending)
 
 #### Invoice Profiles
- - List all invoice profiles (pending)
+ - List all invoice profiles [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoice-Profiles#list-all-invoice-profiles) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoice-Profiles#list-all-invoice-profiles)
 
 ### SCIM
  - List users (pending)
