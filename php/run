@@ -37,3 +37,9 @@ echo "Get users"
 php ./scripts/get_user.php
 echo "List invoice profiles"
 php ./scripts/list_invoice_profiles.php
+echo "List invoices"
+php ./scripts/list_invoices.php
+echo "Get invoice"
+php ./scripts/get_invoice.php
+echo "List invoice lines"
+php ./scripts/invoice_lines.php

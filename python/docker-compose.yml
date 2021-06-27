@@ -10,6 +10,7 @@ services:
     working_dir: /app
     environment:
       API_KEY: ${API_KEY}
+      SANDBOX_API_KEY: ${SANDBOX_API_KEY}
     volumes:
       - ./:/app
       - ./output:/app/output

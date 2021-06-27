@@ -10,6 +10,7 @@ services:
     working_dir: /usr/src/app
     environment:
       API_KEY: ${API_KEY}
+      SANDBOX_API_KEY: ${SANDBOX_API_KEY}
     volumes:
       - ./:/usr/src/app
       - vendor:/usr/src/app/vendor

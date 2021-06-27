@@ -37,3 +37,9 @@ echo "Get user"
 pipenv run python ./scripts/get_user.py
 echo "List invoice profiles"
 pipenv run python ./scripts/list_invoice_profiles.py
+echo "List invoices"
+pipenv run python ./scripts/list_invoices.py
+echo "Get invoice"
+pipenv run python ./scripts/get_invoice.py
+echo "List invoice lines"
+pipenv run python ./scripts/invoice_lines.py
