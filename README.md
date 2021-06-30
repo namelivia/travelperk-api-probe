@@ -14,9 +14,9 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
  - Retrieve an invoice [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#retrieve-an-invoice) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#retrieve-an-invoice)
  - Retrieve invoice PDF (pending)
  - List all invoice lines [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#list-all-invoice-lines) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#list-all-invoice-lines)
- - Get billing periods (pending)
- - Get statuses (pending)
- - Get sorting values (pending)
+ - Get billing periods [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#get-billing-periods) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#get-billing-periods)
+ - Get statuses [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#get-statuses) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#get-statuses)
+ - Get sorting values [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#get-sorting-values) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#get-sorting-values)
 
 #### Invoice Profiles
  - List all invoice profiles [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoice-Profiles#list-all-invoice-profiles) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoice-Profiles#list-all-invoice-profiles)
@@ -27,8 +27,8 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
  - Retrieve a user [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#retrieve-a-user) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#retrieve-a-user)
  - Replace a user (pending)
  - Delete a user (pending)
- - Get genders (pending)
- - Get languages (pending)
+ - Get genders [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#get-genders) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#get-genders)
+ - Get languages [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#get-genders) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#get-genders)
 
 #### Discovery
  - Service provider configuration [python](https://github.com/namelivia/travelperk-http-python/wiki/Discovery#service-provider-configuration) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#list-all-webhook://github.com/namelivia/travelperk-http-php/wiki/Discovery#service-provider-configuration)
@@ -49,7 +49,7 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
  - Get travel restrictions [python](https://github.com/namelivia/travelperk-http-python/wiki/TravelSafe#get-travel-restrictions) [php](https://github.com/namelivia/travelperk-http-php/wiki/TravelSafe#get-travel-restrictions)
  - Get local summary [python](https://github.com/namelivia/travelperk-http-python/wiki/TravelSafe#get-local-summary) [php](https://github.com/namelivia/travelperk-http-php/wiki/TravelSafe#get-local-summary)
  - Get airline safety measures [python](https://github.com/namelivia/travelperk-http-python/wiki/TravelSafe#get-airline-safety-measures) [php](https://github.com/namelivia/travelperk-http-php/wiki/TravelSafe#get-airline-safety-measures)
- - Get location types (pending)
+ - Get location types [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#get-genders) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#get-genders)
 
 ### Cost Centers
  - List cost centers [python](https://github.com/namelivia/travelperk-http-python/wiki/Cost-Centers#list-of-cost-centers) [php](https://github.com/namelivia/travelperk-http-php/wiki/Cost-Centers#list-of-cost-centers)

@@ -43,3 +43,15 @@ echo "Get invoice"
 php ./scripts/get_invoice.php
 echo "List invoice lines"
 php ./scripts/invoice_lines.php
+echo "List billing periods"
+php ./scripts/billing_periods.php
+echo "List statuses"
+php ./scripts/statuses.php
+echo "List sorting values"
+php ./scripts/sorting_values.php
+echo "List genders"
+php ./scripts/genders.php
+echo "List languages"
+php ./scripts/languages.php
+echo "List location types"
+php ./scripts/location_types.php
