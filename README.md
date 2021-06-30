@@ -24,7 +24,7 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
 ### SCIM
  - List users [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#list-users) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#list-users)
  - Create a new user (pending)
- - Retrieve a user (pending)
+ - Retrieve a user [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#retrieve-a-user) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#retrieve-a-user)
  - Replace a user (pending)
  - Delete a user (pending)
  - Get genders (pending)
