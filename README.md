@@ -22,7 +22,7 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
  - List all invoice profiles [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoice-Profiles#list-all-invoice-profiles) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoice-Profiles#list-all-invoice-profiles)
 
 ### SCIM
- - List users (pending)
+ - List users [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#list-users) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#list-users)
  - Create a new user (pending)
  - Retrieve a user (pending)
  - Replace a user (pending)
