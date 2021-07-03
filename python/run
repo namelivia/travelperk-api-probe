@@ -63,3 +63,9 @@ echo "Replace user"
 pipenv run python ./scripts/replace_user.py
 echo "Delete user"
 pipenv run python ./scripts/delete_user.py
+echo "Create webhook"
+pipenv run python ./scripts/create_webhook.py
+echo "Update webhook"
+pipenv run python ./scripts/update_webhook.py
+echo "Delete webhook"
+pipenv run python ./scripts/delete_webhook.py

@@ -39,11 +39,11 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
 
 ### Webhooks
  - List all webhooks [python](https://github.com/namelivia/travelperk-http-python/wiki/Webhooks#list-all-webhooks) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#list-all-webhooks)
- - Create a webhook (pending)
+ - Create a webhook [python](https://github.com/namelivia/travelperk-http-python/wiki/Webhooks#create-a-webhook) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#create-a-webhook)
  - Retrieve a webhook [python](https://github.com/namelivia/travelperk-http-python/wiki/Webhooks#retrieve-a-webhook) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#retrieve-a-webhook)
- - Update a webhook (pending)
+ - Update a webhook [python](https://github.com/namelivia/travelperk-http-python/wiki/Webhooks#update-a-webhook) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#update-a-webhook)
  - Test a webhook [python](https://github.com/namelivia/travelperk-http-python/wiki/Webhooks#test-a-webhook) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#test-a-webhook)
- - Delete a webhook (pending)
+ - Delete a webhook [python](https://github.com/namelivia/travelperk-http-python/wiki/Webhooks#delete-a-webhook) [php](https://github.com/namelivia/travelperk-http-php/wiki/Webhooks#delete-a-webhook)
 
 ### TravelSafe
  - Get travel restrictions [python](https://github.com/namelivia/travelperk-http-python/wiki/TravelSafe#get-travel-restrictions) [php](https://github.com/namelivia/travelperk-http-php/wiki/TravelSafe#get-travel-restrictions)

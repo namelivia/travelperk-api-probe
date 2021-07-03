@@ -63,3 +63,9 @@ echo "Replace user"
 php ./scripts/replace_user.php
 echo "Delete user"
 php ./scripts/delete_user.php
+echo "Create webhook"
+php ./scripts/create_webhook.php
+echo "Update webhook"
+php ./scripts/update_webhook.php
+echo "Delete webhook"
+php ./scripts/delete_webhook.php
