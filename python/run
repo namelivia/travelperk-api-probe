@@ -41,6 +41,8 @@ echo "List invoices"
 pipenv run python ./scripts/list_invoices.py
 echo "Get invoice"
 pipenv run python ./scripts/get_invoice.py
+echo "Get invoice PDF"
+pipenv run python ./scripts/get_invoice_pdf.py
 echo "List invoice lines"
 pipenv run python ./scripts/invoice_lines.py
 echo "List billing periods"
@@ -55,3 +57,9 @@ echo "List languages"
 pipenv run python ./scripts/languages.py
 echo "List location types"
 pipenv run python ./scripts/location_types.py
+echo "Create user"
+pipenv run python ./scripts/create_user.py
+echo "Replace user"
+pipenv run python ./scripts/replace_user.py
+echo "Delete user"
+pipenv run python ./scripts/delete_user.py

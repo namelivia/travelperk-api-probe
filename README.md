@@ -23,10 +23,10 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
 
 ### SCIM
  - List users [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#list-users) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#list-users)
- - Create a new user (pending)
+ - Create a new user [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#create-a-new-user) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#create-a-new-user)
  - Retrieve a user [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#retrieve-a-user) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#retrieve-a-user)
- - Replace a user (pending)
- - Delete a user (pending)
+ - Replace a user [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#replace-a-user) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#replace-a-user)
+ - Delete a user [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#delete-a-user) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#delete-a-user)
  - Get genders [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#get-genders) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#get-genders)
  - Get languages [python](https://github.com/namelivia/travelperk-http-python/wiki/Users#get-genders) [php](https://github.com/namelivia/travelperk-http-php/wiki/Users#get-genders)
 

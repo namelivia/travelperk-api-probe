@@ -41,6 +41,8 @@ echo "List invoices"
 php ./scripts/list_invoices.php
 echo "Get invoice"
 php ./scripts/get_invoice.php
+echo "Get invoice PDF"
+php ./scripts/get_invoice_pdf.php
 echo "List invoice lines"
 php ./scripts/invoice_lines.php
 echo "List billing periods"
@@ -55,3 +57,9 @@ echo "List languages"
 php ./scripts/languages.php
 echo "List location types"
 php ./scripts/location_types.php
+echo "Create user"
+php ./scripts/create_user.php
+echo "Replace user"
+php ./scripts/replace_user.php
+echo "Delete user"
+php ./scripts/delete_user.php
