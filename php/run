@@ -69,3 +69,5 @@ echo "Update webhook"
 php ./scripts/update_webhook.php
 echo "Delete webhook"
 php ./scripts/delete_webhook.php
+echo "Update cost center"
+php ./scripts/update_cost_center.php
