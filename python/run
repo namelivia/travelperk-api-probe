@@ -71,3 +71,5 @@ echo "Delete webhook"
 pipenv run python ./scripts/delete_webhook.py
 echo "Update cost center"
 pipenv run python ./scripts/update_cost_center.py
+echo "Bulk update cost centers"
+pipenv run python ./scripts/bulk_update_cost_centers.py

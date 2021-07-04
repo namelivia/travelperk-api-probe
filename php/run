@@ -71,3 +71,5 @@ echo "Delete webhook"
 php ./scripts/delete_webhook.php
 echo "Update cost center"
 php ./scripts/update_cost_center.php
+echo "Bulk update cost centers"
+php ./scripts/bulk_update_cost_centers.php

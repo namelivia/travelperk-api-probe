@@ -55,7 +55,7 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
  - List cost centers [python](https://github.com/namelivia/travelperk-http-python/wiki/Cost-Centers#list-of-cost-centers) [php](https://github.com/namelivia/travelperk-http-php/wiki/Cost-Centers#list-of-cost-centers)
  - Cost center details [python](https://github.com/namelivia/travelperk-http-python/wiki/Cost-Centers#details-of-a-cost-center) [php](https://github.com/namelivia/travelperk-http-php/wiki/Cost-Centers#details-of-a-cost-center)
  - Update a cost center [python](https://github.com/namelivia/travelperk-http-python/wiki/Cost-Centers#update-a-cost-center) [php](https://github.com/namelivia/travelperk-http-php/wiki/Cost-Centers#update-a-cost-center)
- - Bulk update cost centers (pending)
+ - Bulk update cost centers [python](https://github.com/namelivia/travelperk-http-python/wiki/Cost-Centers#bulk-update-of-cost-centers) [php](https://github.com/namelivia/travelperk-http-php/wiki/Cost-Centers#bulk-update-of-cost-centers)
  - Set users to a cost center (pending) 
  
 ### Trips
