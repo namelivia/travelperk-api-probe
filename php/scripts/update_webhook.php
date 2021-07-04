@@ -14,7 +14,7 @@ write_output("update_webhook", [
 	$webhook->name,
 	$webhook->url,
 	$webhook->secret,
-	count($webhook->events),
+	$webhook->events,
 	$webhook->successfullySent,
 	$webhook->failedSent,
 	$webhook->errorRate,

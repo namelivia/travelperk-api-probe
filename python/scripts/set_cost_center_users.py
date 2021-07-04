@@ -12,7 +12,7 @@ write_output("set_users_for_cost_center", [
     cost_center.name,
     cost_center.archived,
     cost_center.count_users,
-    len(cost_center.users),
+    cost_center.users,
     cost_center.users[0].first_name,
     cost_center.users[0].last_name,
     cost_center.users[0].email,

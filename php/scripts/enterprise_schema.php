@@ -9,7 +9,7 @@ write_output("enterprise_schema", [
 	$enterpriseSchema->id,
 	$enterpriseSchema->name,
 	$enterpriseSchema->description,
-	count($enterpriseSchema->attributes),
+	$enterpriseSchema->attributes,
 	$enterpriseSchema->meta->resourceType,
 	$enterpriseSchema->meta->location,
 ]);

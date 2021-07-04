@@ -25,7 +25,7 @@ write_output("create_user", [
 	$user->groups,
 	$user->active,
 	$user->userName,
-	count($user->phoneNumbers),
+	$user->phoneNumbers,
 	$user->enterpriseExtension->costCenter,
 	$user->travelperkExtension->gender,
 	$user->travelperkExtension->dateOfBirth,
@@ -33,5 +33,5 @@ write_output("create_user", [
 	$user->travelperkExtension->invoiceProfiles[0]->value,
 	$user->travelperkExtension->emergencyContact->name,
 	$user->travelperkExtension->emergencyContact->phone,
-	count($user->travelperkExtension->approvers),
+	$user->travelperkExtension->approvers,
 ]);

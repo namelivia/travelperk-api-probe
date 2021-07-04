@@ -8,7 +8,7 @@ write_output("invoices", [
 	$invoices->offset,
 	$invoices->limit,
 	$invoices->total,
-	count($invoices->invoices),
+	$invoices->invoices,
 	$invoices->invoices[0]->serialNumber,
 	$invoices->invoices[0]->profileId,
 	$invoices->invoices[0]->profileName,

@@ -7,7 +7,7 @@ write_output("trips", [
     trips.offset,
     trips.limit,
     trips.total,
-    len(trips.trips),
+    trips.trips,
     trips.trips[0].id,
     trips.trips[0].trip_name,
     trips.trips[0].start,

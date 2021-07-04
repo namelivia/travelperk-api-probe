@@ -10,9 +10,9 @@ write_output("schemas", [
 	$schemas->totalResults,
 	$schemas->itemsPerPage,
 	$schemas->startIndex,
-	count($schemas->Resources),
+	$schemas->Resources,
 	$schemas->Resources[0]->id,
 	$schemas->Resources[0]->name,
 	$schemas->Resources[0]->description,
-	count($schemas->Resources[0]->attributes),
+	$schemas->Resources[0]->attributes,
 ]);

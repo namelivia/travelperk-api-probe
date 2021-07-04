@@ -6,7 +6,7 @@ cost_centers = travelperk.cost_centers().cost_centers().all()
 write_output("cost_centers", [
     cost_centers.offset,
     cost_centers.limit,
-    len(cost_centers.cost_centers),
+    cost_centers.cost_centers,
     cost_centers.cost_centers[0].id,
     cost_centers.cost_centers[0].name,
     cost_centers.cost_centers[0].count_users,

@@ -9,7 +9,7 @@ write_output("trips", [
 	$trips->offset,
 	$trips->limit,
 	$trips->total,
-	count($trips->trips),
+	$trips->trips,
 	$trips->trips[0]->id,
 	$trips->trips[0]->tripName,
 	$trips->trips[0]->start,

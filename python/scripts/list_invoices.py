@@ -7,7 +7,7 @@ write_output("invoices", [
     invoices.offset,
     invoices.limit,
     invoices.total,
-    len(invoices.invoices),
+    invoices.invoices,
     invoices.invoices[0].serial_number,
     invoices.invoices[0].profile_id,
     invoices.invoices[0].profile_name,

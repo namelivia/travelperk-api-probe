@@ -18,7 +18,7 @@ write_output("local_summary", [
 	$restriction->location->type,
 	$restriction->location->countryCode,
 	$restriction->updatedAt,
-	count($restriction->guidelines),
+	$restriction->guidelines,
 	$restriction->guidelines[0]->category->id,
 	$restriction->guidelines[0]->category->name,
 	$restriction->guidelines[0]->subCategory->id,

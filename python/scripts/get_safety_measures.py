@@ -8,7 +8,7 @@ safety_measure = travelperk.travelsafe().travelsafe().airline_safety_measures(
 write_output("safety_measures", [
     safety_measure.airline.name,
     safety_measure.airline.iata_code,
-    len(safety_measure.safety_measures),
+    safety_measure.safety_measures,
     safety_measure.safety_measures[0].category.id,
     safety_measure.safety_measures[0].category.name,
     safety_measure.safety_measures[0].sub_category.id,

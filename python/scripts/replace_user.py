@@ -26,7 +26,7 @@ write_output("replace_user", [
     user.groups,
     user.active,
     user.user_name,
-    len(user.phone_numbers),
+    user.phone_numbers,
     user.enterprise_extension.cost_center,
     user.travelperk_extension.gender,
     user.travelperk_extension.date_of_birth,
@@ -34,5 +34,5 @@ write_output("replace_user", [
     user.travelperk_extension.invoice_profiles[0].value,
     user.travelperk_extension.emergency_contact.name,
     user.travelperk_extension.emergency_contact.phone,
-    len(user.travelperk_extension.approvers),
+    user.travelperk_extension.approvers,
 ])

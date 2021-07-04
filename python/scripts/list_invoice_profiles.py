@@ -7,7 +7,7 @@ write_output("profiles", [
     profiles.offset,
     profiles.limit,
     profiles.total,
-    len(profiles.profiles),
+    profiles.profiles,
     profiles.profiles[0].id,
     profiles.profiles[0].name,
     profiles.profiles[0].payment_method_type,

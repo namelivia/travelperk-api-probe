@@ -9,7 +9,7 @@ write_output("users", [
 	$users->offset,
 	$users->limit,
 	$users->total,
-	count($users->users),
+	$users->users,
 	$users->users[0]->id,
 	$users->users[0]->userName,
 	$users->users[0]->name->firstName,
@@ -20,6 +20,6 @@ write_output("users", [
 	$users->users[0]->locale,
 	$users->users[0]->active,
 	$users->users[0]->jobTitle,
-	count($users->users[0]->phoneNumbers),
+	$users->users[0]->phoneNumbers,
 	$users->users[0]->emergencyContact,
 ]);

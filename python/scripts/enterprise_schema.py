@@ -7,7 +7,7 @@ write_output("enterprise_schema", [
     enterprise_schema["id"],
     enterprise_schema["name"],
     enterprise_schema["description"],
-    len(enterprise_schema["attributes"]),
+    enterprise_schema["attributes"],
     enterprise_schema["meta"]["resourceType"],
     enterprise_schema["meta"]["location"],
 ])

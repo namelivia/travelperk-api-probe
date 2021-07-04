@@ -19,7 +19,7 @@ write_output("travel_restrictions", [
     restriction.start_date,
     restriction.end_date,
     restriction.updated_at,
-    len(restriction.requirements),
+    restriction.requirements,
     restriction.requirements[0].category.id,
     restriction.requirements[0].category.name,
     restriction.requirements[0].sub_category.id,
@@ -28,5 +28,5 @@ write_output("travel_restrictions", [
     restriction.requirements[0].details,
     restriction.requirements[0].start_date,
     restriction.requirements[0].end_date,
-    len(restriction.requirements[0].documents),
+    restriction.requirements[0].documents,
 ])

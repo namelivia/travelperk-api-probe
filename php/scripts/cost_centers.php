@@ -8,7 +8,7 @@ $costCenters = $travelperk->costCenters()->costCenters()->all();
 write_output("cost_centers", [
 	$costCenters->offset,
 	$costCenters->limit,
-	count($costCenters->costCenters),
+	$costCenters->costCenters,
 	$costCenters->costCenters[0]->id,
 	$costCenters->costCenters[0]->name,
 	$costCenters->costCenters[0]->countUsers,

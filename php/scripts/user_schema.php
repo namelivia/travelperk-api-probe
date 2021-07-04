@@ -9,7 +9,7 @@ write_output("user_schema", [
 	$userSchema->id,
 	$userSchema->name,
 	$userSchema->description,
-	count($userSchema->attributes),
+	$userSchema->attributes,
 	$userSchema->meta->resourceType,
 	$userSchema->meta->location,
 ]);

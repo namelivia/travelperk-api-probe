@@ -25,7 +25,7 @@ write_output("travel_restrictions", [
 	$restriction->startDate,
 	$restriction->endDate,
 	$restriction->updatedAt,
-	count($restriction->requirements),
+	$restriction->requirements,
 	$restriction->requirements[0]->category->id,
 	$restriction->requirements[0]->category->name,
 	$restriction->requirements[0]->subCategory->id,
@@ -34,5 +34,5 @@ write_output("travel_restrictions", [
 	$restriction->requirements[0]->details,
 	$restriction->requirements[0]->startDate,
 	$restriction->requirements[0]->endDate,
-	count($restriction->requirements[0]->documents),
+	$restriction->requirements[0]->documents,
 ]);

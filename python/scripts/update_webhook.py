@@ -12,7 +12,7 @@ write_output("update_webhook", [
     webhook.name,
     webhook.url,
     webhook.secret,
-    len(webhook.events),
+    webhook.events,
     webhook.events[0],
     webhook.successfully_sent,
     webhook.failed_sent,

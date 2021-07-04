@@ -7,7 +7,7 @@ write_output("user_schema", [
     user_schema["id"],
     user_schema["name"],
     user_schema["description"],
-    len(user_schema["attributes"]),
+    user_schema["attributes"],
     user_schema["meta"]["resourceType"],
     user_schema["meta"]["location"],
 ])

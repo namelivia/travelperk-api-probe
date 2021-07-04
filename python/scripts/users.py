@@ -7,7 +7,7 @@ write_output("users", [
     users.offset,
     users.limit,
     users.total,
-    len(users.users),
+    users.users,
     users.users[0].id,
     users.users[0].user_name,
     users.users[0].name.first_name,
@@ -18,6 +18,6 @@ write_output("users", [
     users.users[0].locale,
     users.users[0].active,
     users.users[0].job_title,
-    len(users.users[0].phone_numbers),
+    users.users[0].phone_numbers,
     users.users[0].emergency_contact,
 ])

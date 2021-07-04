@@ -14,7 +14,7 @@ write_output("set_users_for_cost_center", [
 	$costCenter->name,
 	$costCenter->archived,
 	$costCenter->countUsers,
-	count($costCenter->users),
+	$costCenter->users,
     $costCenter->users[0]->firstName,
     $costCenter->users[0]->lastName,
     $costCenter->users[0]->email,

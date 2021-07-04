@@ -8,7 +8,7 @@ write_output("profiles", [
     $profiles->offset,
     $profiles->limit,
     $profiles->total,
-    count($profiles->profiles),
+    $profiles->profiles,
     $profiles->profiles[0]->id,
     $profiles->profiles[0]->name,
     $profiles->profiles[0]->paymentMethodType,

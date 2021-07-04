@@ -10,7 +10,7 @@ $safetyMeasure = $travelperk->travelSafe()->travelSafe()->airlineSafetyMeasures(
 write_output("safety_measures", [
 	$safetyMeasure->airline->name,
 	$safetyMeasure->airline->iataCode,
-	count($safetyMeasure->safetyMeasures),
+	$safetyMeasure->safetyMeasures,
 	$safetyMeasure->safetyMeasures[0]->category->id,
 	$safetyMeasure->safetyMeasures[0]->category->name,
 	$safetyMeasure->safetyMeasures[0]->subCategory->id,

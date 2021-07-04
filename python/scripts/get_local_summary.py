@@ -15,7 +15,7 @@ write_output("local_summary", [
     restriction.location.type,
     restriction.location.country_code,
     restriction.updated_at,
-    len(restriction.guidelines),
+    restriction.guidelines,
     restriction.guidelines[0].category.id,
     restriction.guidelines[0].category.name,
     restriction.guidelines[0].sub_category.id,
