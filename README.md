@@ -12,7 +12,7 @@ To run it yourself, copy `.env.example` to `.env` and fill in your credentials, 
 
  - List all invoices [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#list-all-invoices) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#list-all-invoices)
  - Retrieve an invoice [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#retrieve-an-invoice) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#retrieve-an-invoice)
- - Retrieve invoice PDF (pending)
+ - Retrieve invoice PDF [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#retrieve-invoice-pdf) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#retrieve-invoice-pdf)
  - List all invoice lines [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#list-all-invoice-lines) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#list-all-invoice-lines)
  - Get billing periods [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#get-billing-periods) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#get-billing-periods)
  - Get statuses [python](https://github.com/namelivia/travelperk-http-python/wiki/Invoices#get-statuses) [php](https://github.com/namelivia/travelperk-http-php/wiki/Invoices#get-statuses)
