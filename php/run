@@ -73,3 +73,5 @@ echo "Update cost center"
 php ./scripts/update_cost_center.php
 echo "Bulk update cost centers"
 php ./scripts/bulk_update_cost_centers.php
+echo "Set users for cost centers"
+php ./scripts/set_cost_center_users.php

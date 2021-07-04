@@ -73,3 +73,5 @@ echo "Update cost center"
 pipenv run python ./scripts/update_cost_center.py
 echo "Bulk update cost centers"
 pipenv run python ./scripts/bulk_update_cost_centers.py
+echo "Set users for cost centers"
+pipenv run python ./scripts/set_cost_center_users.py
