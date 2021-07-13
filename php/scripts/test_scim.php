@@ -25,9 +25,9 @@ class SCIMTests {
 		echo ("Delete user\n");
 		$this->deleteUser($travelperk, $id);
 		echo ("Get genders\n");
-		$this->getGenders($travelperk, $id);
+		$this->getGenders($travelperk);
 		echo ("Get languages\n");
-		$this->getLanguages($travelperk, $id);
+		$this->getLanguages($travelperk);
 	}
 
 	private function deleteUser($travelperk, $id) {
@@ -62,7 +62,7 @@ class SCIMTests {
 			$user->travelperkExtension->gender,
 			$user->travelperkExtension->dateOfBirth,
 			$user->travelperkExtension->travelPolicy,
-			$user->travelperkExtension->invoiceProfiles[0]->value,
+			#$user->travelperkExtension->invoiceProfiles[0]->value,
 			$user->travelperkExtension->emergencyContact->name,
 			$user->travelperkExtension->emergencyContact->phone,
 			$user->travelperkExtension->approvers,

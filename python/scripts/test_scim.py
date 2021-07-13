@@ -16,11 +16,11 @@ class SCIMTests:
         print("Get user")
         self.get_user(travelperk)
         print("Create user")
-        self.create_user(travelperk)
+        user_id = self.create_user(travelperk)
         print("Replace user")
-        self.replace_user(travelperk)
+        self.replace_user(travelperk, user_id)
         print("Delete user")
-        self.delete_user(travelperk)
+        self.delete_user(travelperk, user_id)
         print("Get genders")
         self.get_genders(travelperk)
         print("Get languages")
@@ -183,21 +183,22 @@ class SCIMTests:
             user.travelperk_extension.gender,
             user.travelperk_extension.date_of_birth,
             user.travelperk_extension.travel_policy,
-            user.travelperk_extension.invoice_profiles[0].value,
+            # TODO: This comes empty
+            # user.travelperk_extension.invoice_profiles[0].value,
             user.travelperk_extension.emergency_contact.name,
             user.travelperk_extension.emergency_contact.phone,
             user.travelperk_extension.approvers,
         ])
+        return user.id
 
-    def replace_user(self, travelperk):
+    def replace_user(self, travelperk, user_id):
         user = travelperk.scim().users().modify(
-            5745,
+            user_id,
             'replaced@api.probe',
             True,
             'Test Updated',
             'Api Probe Updated'
         ).set_locale("fr").set_title("test_user_updated").save()
-        # TODO: It would be convenient to be able to get the id from the create script
         write_output("replace_user", [
             user.schemas[0],
             user.schemas[1],
@@ -219,16 +220,16 @@ class SCIMTests:
             user.travelperk_extension.gender,
             user.travelperk_extension.date_of_birth,
             user.travelperk_extension.travel_policy,
-            user.travelperk_extension.invoice_profiles[0].value,
+            # TODO: This comes empty
+            # user.travelperk_extension.invoice_profiles[0].value,
             user.travelperk_extension.emergency_contact.name,
             user.travelperk_extension.emergency_contact.phone,
             user.travelperk_extension.approvers,
         ])
 
-    def delete_user(self, travelperk):
-        # TODO: It would be convenient to be able to get the id from the create script
+    def delete_user(self, travelperk, user_id):
         # This operation returns nothing
-        travelperk.scim().users().delete(5745)
+        travelperk.scim().users().delete(user_id)
 
     def get_genders(self, travelperk):
         genders = travelperk.scim().users().genders()

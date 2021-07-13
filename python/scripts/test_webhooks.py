@@ -10,11 +10,11 @@ class WebhooksTests:
         print("Test webhook")
         self.test_webhook(travelperk)
         print("Create webhook")
-        self.create_webhook(travelperk)
+        webhook_id = self.create_webhook(travelperk)
         print("Update webhook")
-        self.update_webhook(travelperk)
+        self.update_webhook(travelperk, webhook_id)
         print("Delete webhook")
-        self.delete_webhook(travelperk)
+        self.delete_webhook(travelperk, webhook_id)
 
     def list_webhooks(self, travelperk):
         webhooks = travelperk.webhooks().webhooks().all()
@@ -70,12 +70,10 @@ class WebhooksTests:
             webhook.failed_sent,
             webhook.error_rate,
         ])
+        return webhook.id
 
-    def update_webhook(self, travelperk):
-        webhook = travelperk.webhooks().webhooks().modify(
-            "1b92ce9c-2d80-45a1-bf8e-bbae60892ae7"
-        ).set_enabled(False).save()
-        # TODO: It would be convenient to be able to get the id from the create script
+    def update_webhook(self, travelperk, webhook_id):
+        webhook = travelperk.webhooks().webhooks().modify(webhook_id).set_enabled(False).save()
         write_output("update_webhook", [
             webhook.id,
             webhook.enabled,
@@ -89,8 +87,5 @@ class WebhooksTests:
             webhook.error_rate,
         ])
 
-    def delete_webhook(self, travelperk):
-        # TODO: It would be convenient to be able to get the id from the create script
-        travelperk.webhooks().webhooks().delete(
-            "1b92ce9c-2d80-45a1-bf8e-bbae60892ae7"
-        )
+    def delete_webhook(self, travelperk, webhook_id):
+        travelperk.webhooks().webhooks().delete(webhook_id)
