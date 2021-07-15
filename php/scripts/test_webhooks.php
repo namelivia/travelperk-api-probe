@@ -21,9 +21,7 @@ class WebhooksTests {
 	}
 
 	private function testWebhook($travelperk) {
-		$webhook = $travelperk->webhooks()->webhooks()->test("b4ab65a2-31b6-4cf8-9cfb-f0788c47f7c7");
-		write_output("test_webhook", [
-		]);
+		$travelperk->webhooks()->webhooks()->test("b4ab65a2-31b6-4cf8-9cfb-f0788c47f7c7");
 	}
 
 	private function getWebhook($travelperk) {
@@ -67,12 +65,13 @@ class WebhooksTests {
 			["invoice.issued"],
 		);
 		write_output("create_webhook", [
-			$webhook->id,
+			# $webhook->id, Id will be new every time
 			$webhook->enabled,
 			$webhook->name,
 			$webhook->url,
 			$webhook->secret,
 			$webhook->events,
+			$webhook->events[0],
 			$webhook->successfullySent,
 			$webhook->failedSent,
 			$webhook->errorRate,
@@ -85,12 +84,13 @@ class WebhooksTests {
 			$id
 		)->setEnabled(false)->save();
 		write_output("update_webhook", [
-			$webhook->id,
+			# $webhook->id, Id will be new every time
 			$webhook->enabled,
 			$webhook->name,
 			$webhook->url,
 			$webhook->secret,
 			$webhook->events,
+			$webhook->events[0],
 			$webhook->successfullySent,
 			$webhook->failedSent,
 			$webhook->errorRate,

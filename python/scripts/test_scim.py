@@ -174,7 +174,7 @@ class SCIMTests:
             user.preferred_language,
             user.title,
             user.external_id,
-            user.id,
+            # user.id, This will change every time
             user.groups,
             user.active,
             user.user_name,
@@ -211,7 +211,7 @@ class SCIMTests:
             user.preferred_language,
             user.title,
             user.external_id,
-            user.id,
+            # user.id, This will change every time
             user.groups,
             user.active,
             user.user_name,

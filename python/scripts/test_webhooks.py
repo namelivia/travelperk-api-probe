@@ -48,8 +48,7 @@ class WebhooksTests:
         ])
 
     def test_webhook(self, travelperk):
-        webhook = travelperk.webhooks().webhooks().test("b4ab65a2-31b6-4cf8-9cfb-f0788c47f7c7")
-        write_output("test_webhook", [])
+        travelperk.webhooks().webhooks().test("b4ab65a2-31b6-4cf8-9cfb-f0788c47f7c7")
 
     def create_webhook(self, travelperk):
         webhook = travelperk.webhooks().webhooks().create(
@@ -59,7 +58,7 @@ class WebhooksTests:
             ["invoice.issued"],
         )
         write_output("create_webhook", [
-            webhook.id,
+            # webhook.id,  Id will be new every time
             webhook.enabled,
             webhook.name,
             webhook.url,
@@ -75,7 +74,7 @@ class WebhooksTests:
     def update_webhook(self, travelperk, webhook_id):
         webhook = travelperk.webhooks().webhooks().modify(webhook_id).set_enabled(False).save()
         write_output("update_webhook", [
-            webhook.id,
+            # webhook.id, Id will be new every time
             webhook.enabled,
             webhook.name,
             webhook.url,

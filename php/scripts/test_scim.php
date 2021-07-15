@@ -53,7 +53,7 @@ class SCIMTests {
 			$user->preferredLanguage,
 			$user->title,
 			$user->externalId,
-			$user->id,
+			# $user->id, This will change every time
 			$user->groups,
 			$user->active,
 			$user->userName,
@@ -90,7 +90,7 @@ class SCIMTests {
 			$user->preferredLanguage,
 			$user->title,
 			$user->externalId,
-			$user->id,
+			# $user->id, This will change every time
 			$user->groups,
 			$user->active,
 			$user->userName,

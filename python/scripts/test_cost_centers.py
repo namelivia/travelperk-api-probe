@@ -70,6 +70,9 @@ class CostCentersTests:
         write_output("bulk_update_cost_center", [
             response.updated_count
         ])
+        response = travelperk.cost_centers().cost_centers().bulk_update().set_ids(
+            [1, 2]
+        ).set_archive(False).save()
 
     def set_users(self, travelperk):
         cost_center = travelperk.cost_centers().cost_centers().get("1")
