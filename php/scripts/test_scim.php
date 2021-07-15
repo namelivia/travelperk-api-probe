@@ -62,6 +62,7 @@ class SCIMTests {
 			$user->travelperkExtension->gender,
 			$user->travelperkExtension->dateOfBirth,
 			$user->travelperkExtension->travelPolicy,
+            # TODO: This comes empty
 			#$user->travelperkExtension->invoiceProfiles[0]->value,
 			$user->travelperkExtension->emergencyContact->name,
 			$user->travelperkExtension->emergencyContact->phone,
@@ -99,7 +100,8 @@ class SCIMTests {
 			$user->travelperkExtension->gender,
 			$user->travelperkExtension->dateOfBirth,
 			$user->travelperkExtension->travelPolicy,
-			$user->travelperkExtension->invoiceProfiles[0]->value,
+            # TODO: This comes empty
+			#$user->travelperkExtension->invoiceProfiles[0]->value,
 			$user->travelperkExtension->emergencyContact->name,
 			$user->travelperkExtension->emergencyContact->phone,
 			$user->travelperkExtension->approvers,

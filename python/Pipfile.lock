@@ -25,11 +25,11 @@
         },
         "charset-normalizer": {
             "hashes": [
-                "sha256:ad0da505736fc7e716a8da15bf19a985db21ac6415c26b34d2fafd3beb3d927e",
-                "sha256:b68b38179052975093d71c1b5361bf64afd80484697c1f27056e50593e695ceb"
+                "sha256:3c502a35807c9df35697b0f44b1d65008f83071ff29c69677c7c22573bc5a45a",
+                "sha256:951567c2f7433a70ab63f1be67e5ee05d3925d9423306ecb71a3b272757bcc95"
             ],
             "markers": "python_version >= '3'",
-            "version": "==2.0.1"
+            "version": "==2.0.2"
         },
         "idna": {
             "hashes": [
@@ -97,12 +97,12 @@
         "travelperk-http-python": {
             "editable": true,
             "git": "https://github.com/namelivia/travelperk-http-python.git",
-            "ref": "a1d9539efcb193d5a89c8c08b4be2c989a8416a8"
+            "ref": "963bcfe2020f74faf6a61f89e7cf1cacc9dacaef"
         },
         "travelperk-python-api-types": {
             "editable": true,
             "git": "https://github.com/namelivia/travelperk-python-api-types.git",
-            "ref": "3dce1ca5544d08d0337a462f26e727ca6fcc03a8"
+            "ref": "0df2c914701c0e8d886952041a06420899c09d32"
         },
         "typing-extensions": {
             "hashes": [
