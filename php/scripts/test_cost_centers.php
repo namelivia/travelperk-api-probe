@@ -8,6 +8,8 @@ class CostCentersTests {
 	public function run($travelperk) {
 		echo ("List cost centers\n");
 		$this->listCostCenters($travelperk);
+		echo ("Create cost center\n");
+		$this->createCostCenter($travelperk);
 		echo ("Cost center details\n");
 		$this->getCostCenter($travelperk);
 		echo ("Update cost center\n");
@@ -28,6 +30,19 @@ class CostCentersTests {
 			$costCenters->costCenters[0]->name,
 			$costCenters->costCenters[0]->countUsers,
 		]);
+	}
+
+	private function createCostCenter($travelperk) {
+		$costCenter = $travelperk->costCenters()->costCenters()->create("api-probe-test-cost-center");
+		write_output("create_cost_center", [
+			$costCenter->id,
+			$costCenter->name,
+			$costCenter->archived,
+			$costCenter->countUsers,
+			$costCenter->users,
+		]);
+		# The cost center gets archived so it can be created again
+		$travelperk->costCenters()->costCenters()->modify($costCenter->id)->setArchive(True)->save();
 	}
 
 	private function getCostCenter($travelperk) {

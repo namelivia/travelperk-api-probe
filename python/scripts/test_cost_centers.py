@@ -5,6 +5,8 @@ class CostCentersTests:
     def run(self, travelperk):
         print("List cost centers")
         self.list_cost_centers(travelperk)
+        print("Create cost center")
+        self.create_cost_center(travelperk)
         print("Get cost center")
         self.get_cost_center(travelperk)
         print("Update cost center")
@@ -62,6 +64,18 @@ class CostCentersTests:
         travelperk.cost_centers().cost_centers().modify("1").set_name(
             original_cost_center.name
         ).save()
+
+    def create_cost_center(self, travelperk):
+        cost_center = travelperk.cost_centers().cost_centers().create("api-probe-test-cost-center")
+        write_output("create_cost_center", [
+            cost_center.id,
+            cost_center.name,
+            cost_center.archived,
+            cost_center.count_users,
+            cost_center.users
+        ])
+        # The cost center gets archived so it can be created again
+        travelperk.cost_centers().cost_centers().modify(cost_center.id).set_archive(True).save()
 
     def bulk_update(self, travelperk):
         response = travelperk.cost_centers().cost_centers().bulk_update().set_ids(
