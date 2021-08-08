@@ -58,6 +58,7 @@ It will run all operations using both [php](https://github.com/namelivia/travelp
 
 ### Cost Centers
  - List cost centers [python](https://github.com/namelivia/travelperk-http-python/wiki/Cost-Centers#list-of-cost-centers) [php](https://github.com/namelivia/travelperk-http-php/wiki/Cost-Centers#list-of-cost-centers)
+ - Creating a cost center [python](https://github.com/namelivia/travelperk-http-python/wiki/Cost-Centers#creating-a-cost-center) [php](https://github.com/namelivia/travelperk-http-php/wiki/Cost-Centers#creating-a-cost-center)
  - Cost center details [python](https://github.com/namelivia/travelperk-http-python/wiki/Cost-Centers#details-of-a-cost-center) [php](https://github.com/namelivia/travelperk-http-php/wiki/Cost-Centers#details-of-a-cost-center)
  - Update a cost center [python](https://github.com/namelivia/travelperk-http-python/wiki/Cost-Centers#update-a-cost-center) [php](https://github.com/namelivia/travelperk-http-php/wiki/Cost-Centers#update-a-cost-center)
  - Bulk update cost centers [python](https://github.com/namelivia/travelperk-http-python/wiki/Cost-Centers#bulk-update-of-cost-centers) [php](https://github.com/namelivia/travelperk-http-php/wiki/Cost-Centers#bulk-update-of-cost-centers)
