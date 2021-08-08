@@ -35,7 +35,7 @@ class CostCentersTests {
 	private function createCostCenter($travelperk) {
 		$costCenter = $travelperk->costCenters()->costCenters()->create("api-probe-test-cost-center");
 		write_output("create_cost_center", [
-			$costCenter->id,
+			#$costCenter->id,
 			$costCenter->name,
 			$costCenter->archived,
 			$costCenter->countUsers,

@@ -6,6 +6,10 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     zip
 
+# Install debugger
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+
 # Install extensions
 RUN docker-php-ext-install zip
 

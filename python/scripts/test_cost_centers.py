@@ -68,7 +68,7 @@ class CostCentersTests:
     def create_cost_center(self, travelperk):
         cost_center = travelperk.cost_centers().cost_centers().create("api-probe-test-cost-center")
         write_output("create_cost_center", [
-            cost_center.id,
+            # cost_center.id,
             cost_center.name,
             cost_center.archived,
             cost_center.count_users,
@@ -93,7 +93,7 @@ class CostCentersTests:
         original_users = [user.id for user in cost_center.users]
         cost_center = travelperk.cost_centers().cost_centers().set_users(
             "1"
-        ).set_ids([2]).save()
+        ).set_ids([65, 34]).save()
         write_output("set_users_for_cost_center", [
             cost_center.id,
             cost_center.name,

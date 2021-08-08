@@ -1,7 +1,7 @@
 {
     "require": {
         "php": "^7.3",
-        "namelivia/travelperk-http-php": "^1.5.0",
+        "namelivia/travelperk-http-php": "^1.5.8",
         "kamermans/guzzle-oauth2-subscriber": "^1.0"
     },
     "config": {
