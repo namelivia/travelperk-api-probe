@@ -4,6 +4,11 @@ This project will be used to periodically test the TravelPerk API wrappers to ch
 
 To run it yourself, copy `.env.example` to `.env` and fill in your credentials, then execute `./run`.
 
+## About
+
+The probe will perform all possible operations on the actual api and store the results (all writing operations will be undone right after).
+It will run all operations using both [php](https://github.com/namelivia/travelperk-http-php) and [python](https://github.com/namelivia/travelperk-http-python/) wrappers. And finally it will compare the results, the goal is a successful execution and no differences between the files written by both wrappers.
+
 ## Operations included on the probe
 
 ### Expenses
