@@ -11,3 +11,6 @@ echo 'Running php probe'
 (cd php && docker-compose build && docker-compose up)
 echo 'Comparing results'
 diff -arq python/output php/output
+if [ $? -eq  1 ]; then
+    echo 'There are diferencies in the outputs'
+fi
