@@ -1,41 +1,42 @@
 <?php
 require_once(__DIR__."/../vendor/autoload.php");
 require_once("utils.php");
+require_once("test_base.php");
 use Namelivia\TravelPerk\ServiceProvider;
 
-class SCIMTests {
+class SCIMTests extends TestBase {
 
-	public function run($travelperk) {
+	public function run() {
 		echo ("Get service provider configuration\n");
-		$this->getServiceProviderConfig($travelperk);
+		$this->getServiceProviderConfig();
 		echo ("Get resource types\n");
-		$this->getResourceTypes($travelperk);
+		$this->getResourceTypes();
 		echo ("Get user schema\n");
-		$this->getUserSchema($travelperk);
+		$this->getUserSchema();
 		echo ("Get enterprise schema\n");
-		$this->getEnterpriseSchema($travelperk);
+		$this->getEnterpriseSchema();
 		echo ("List users\n");
-		$this->listUsers($travelperk);
+		$this->listUsers();
 		echo ("Get user\n");
-		$this->getUser($travelperk);
+		$this->getUser();
 		echo ("Create user\n");
-		$id = $this->createUser($travelperk);
+		$id = $this->createUser();
 		echo ("Replace user\n");
-		$this->replaceUser($travelperk, $id);
+		$this->replaceUser($id);
 		echo ("Delete user\n");
-		$this->deleteUser($travelperk, $id);
+		$this->deleteUser($id);
 		echo ("Get genders\n");
-		$this->getGenders($travelperk);
+		$this->getGenders();
 		echo ("Get languages\n");
-		$this->getLanguages($travelperk);
+		$this->getLanguages();
 	}
 
-	private function deleteUser($travelperk, $id) {
-		$travelperk->scim()->users()->delete($id);
+	private function deleteUser($id) {
+		$this->travelperk->scim()->users()->delete($id);
 	}
 
-	private function createUser($travelperk) {
-		$user = $travelperk->scim()->users()->make(
+	private function createUser() {
+		$user = $this->travelperk->scim()->users()->make(
 			'test@api.probe',
 			true,
 			'Test',
@@ -71,8 +72,8 @@ class SCIMTests {
 		return $user->id;
 	}
 
-	public function replaceUser($travelperk, $id) {
-		$user = $travelperk->scim()->users()->modify(
+	public function replaceUser($id) {
+		$user = $this->travelperk->scim()->users()->modify(
 			$id,
 			'replaced@api.probe',
 			true,
@@ -108,8 +109,8 @@ class SCIMTests {
 		]);
 	}
 
-	private function getUser($travelperk) {
-		$user = $travelperk->scim()->users()->get(2);
+	private function getUser() {
+		$user = $this->travelperk->scim()->users()->get(2);
 		write_output("user", [
 			$user->schemas[0],
 			$user->schemas[1],
@@ -138,8 +139,8 @@ class SCIMTests {
 		]);
 	}
 
-	private function listUsers($travelperk) {
-		$users = $travelperk->scim()->users()->query()->setStartIndex(1)->setCount(10)->get();
+	private function listUsers() {
+		$users = $this->travelperk->scim()->users()->query()->setStartIndex(1)->setCount(10)->get();
 		write_output("scim_users", [
 			$users->schemas[0],
 			$users->totalResults,
@@ -173,8 +174,8 @@ class SCIMTests {
 		]);
 	}
 
-	private function getServiceProviderConfig($travelperk) {
-		$config = $travelperk->scim()->discovery()->ServiceProviderConfig();
+	private function getServiceProviderConfig() {
+		$config = $this->travelperk->scim()->discovery()->ServiceProviderConfig();
 		write_output("service_provider_config", [
 			$config->schemas[0],
 			$config->patch->supported,
@@ -197,8 +198,8 @@ class SCIMTests {
 		]);
 	}
 
-	private function getResourceTypes($travelperk) {
-		$resourceTypes = $travelperk->scim()->discovery()->resourceTypes();
+	private function getResourceTypes() {
+		$resourceTypes = $this->travelperk->scim()->discovery()->resourceTypes();
 		write_output("list_resource_types", [
 			$resourceTypes->totalResults,
 			$resourceTypes->itemsPerPage,
@@ -219,8 +220,8 @@ class SCIMTests {
 		]);
 	}
 
-	private function getUserSchema($travelperk) {
-		$userSchema = $travelperk->scim()->discovery()->userSchema();
+	private function getUserSchema() {
+		$userSchema = $this->travelperk->scim()->discovery()->userSchema();
 		write_output("user_schema", [
 			$userSchema->id,
 			$userSchema->name,
@@ -231,8 +232,8 @@ class SCIMTests {
 		]);
 	}
 
-	private function getEnterpriseSchema($travelperk) {
-		$enterpriseSchema = $travelperk->scim()->discovery()->enterpriseUserSchema();
+	private function getEnterpriseSchema() {
+		$enterpriseSchema = $this->travelperk->scim()->discovery()->enterpriseUserSchema();
 		write_output("enterprise_schema", [
 			$enterpriseSchema->id,
 			$enterpriseSchema->name,
@@ -243,15 +244,15 @@ class SCIMTests {
 		]);
 	}
 
-	private function getGenders($travelperk) {
-		$genders = $travelperk->scim()->users()->genders();
+	private function getGenders() {
+		$genders = $this->travelperk->scim()->users()->genders();
 		write_output("genders", [
 			$genders,
 		]);
 	}
 	
-	private function getLanguages($travelperk) {
-		$languages = $travelperk->scim()->users()->languages();
+	private function getLanguages() {
+		$languages = $this->travelperk->scim()->users()->languages();
 		write_output("languages", [
 			$languages,
 		]);

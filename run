@@ -5,10 +5,10 @@ fi
 echo 'Cleaning output folders'
 rm -f python/output/*
 rm -f php/output/*
-echo 'Running python probe'
-(cd python && docker-compose build -q && docker-compose up)
+#echo 'Running python probe'
+#(cd python && docker-compose build -q && docker-compose up)
 echo 'Running php probe'
-(cd php && docker-compose build && docker-compose up)
+(cd php && docker-compose build -q && docker-compose up)
 echo 'Comparing results'
 diff -arq python/output php/output
 if [ $? -eq  1 ]; then

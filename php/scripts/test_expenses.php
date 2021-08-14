@@ -1,32 +1,37 @@
 <?php
 require_once(__DIR__."/../vendor/autoload.php");
 require_once("utils.php");
+require_once("test_base.php");
 use Namelivia\TravelPerk\ServiceProvider;
 
-class ExpensesTests {
+class ExpensesTests extends TestBase {
 
-	public function run($travelperk) {
-		echo ("List invoices\n");
-		$this->listInvoices($travelperk);
-		echo ("Get invoice\n");
-		$this->getInvoice($travelperk);
-		#TODO: This his crashing
-		#echo ("Get invoice PDF\n");
-		#$this->getInvoicePDF($travelperk);
-		echo ("List invoice lines\n");
-		$this->getInvoiceLines($travelperk);
-		echo ("Get billing periods\n");
-		$this->getBillingPeriods($travelperk);
-		echo ("Get statuses\n");
-		$this->getStatuses($travelperk);
-		echo ("Get sorting valuese\n");
-		$this->getSortingValues($travelperk);
-		echo ("Get invoice profiles\n");
-		$this->getInvoiceProfiles($travelperk);
+	public function __construct($travelperk) {
+		parent::__construct($travelperk);
 	}
 
-	private function listInvoices($travelperk) {
-		$invoices = $travelperk->expenses()->invoices()->query()->setOffset(1)->setLimit(10)->get();
+	public function run() {
+		echo ("List invoices\n");
+		$this->listInvoices();
+		echo ("Get invoice\n");
+		$this->getInvoice();
+		#TODO: This his crashing
+		#echo ("Get invoice PDF\n");
+		#$this->getInvoicePDF();
+		echo ("List invoice lines\n");
+		$this->getInvoiceLines();
+		echo ("Get billing periods\n");
+		$this->getBillingPeriods();
+		echo ("Get statuses\n");
+		$this->getStatuses();
+		echo ("Get sorting valuese\n");
+		$this->getSortingValues();
+		echo ("Get invoice profiles\n");
+		$this->getInvoiceProfiles();
+	}
+
+	private function listInvoices() {
+		$invoices = $this->travelperk->expenses()->invoices()->query()->setOffset(1)->setLimit(10)->get();
 		write_output("invoices", [
 			$invoices->offset,
 			$invoices->limit,
@@ -62,8 +67,8 @@ class ExpensesTests {
 		]);
 	}
 
-	private function getInvoice($travelperk) {
-		$invoice = $travelperk->expenses()->invoices()->get("CR-01-2");
+	private function getInvoice() {
+		$invoice = $this->travelperk->expenses()->invoices()->get("CR-01-2");
 		write_output("invoice", [
 			$invoice->serialNumber,
 			$invoice->profileId,
@@ -124,15 +129,15 @@ class ExpensesTests {
 		]);
 	}
 
-	private function getInvoicePDF($travelperk) {
-		$invoicePDF = $travelperk->expenses()->invoices()->pdf("CR-01-2");
+	private function getInvoicePDF() {
+		$invoicePDF = $this->travelperk->expenses()->invoices()->pdf("CR-01-2");
 		write_output("invoice_pdf", [
 			$invoicePDF
 		]);
 	}
 
-	private function getInvoiceLines($travelperk) {
-		$lines = $travelperk->expenses()->invoices()->linesQuery()->setOffset(1)->setLimit(10)->get();
+	private function getInvoiceLines() {
+		$lines = $this->travelperk->expenses()->invoices()->linesQuery()->setOffset(1)->setLimit(10)->get();
 		write_output("invoice_lines", [
 			$lines->total,
 			$lines->offset,
@@ -177,29 +182,29 @@ class ExpensesTests {
 		]);
 	}
 
-	private function getBillingPeriods($travelperk) {
-		$billingPeriods = $travelperk->expenses()->invoices()->billingPeriods();
+	private function getBillingPeriods() {
+		$billingPeriods = $this->travelperk->expenses()->invoices()->billingPeriods();
 		write_output("billing_periods", [
 			$billingPeriods
 		]);
 	}
 
-	private function getStatuses ($travelperk) {
-		$statuses = $travelperk->expenses()->invoices()->statuses();
+	private function getStatuses () {
+		$statuses = $this->travelperk->expenses()->invoices()->statuses();
 		write_output("statuses", [
 			$statuses
 		]);
 	}
 
-	private function getSortingValues($travelperk) {
-		$sorting = $travelperk->expenses()->invoices()->sorting();
+	private function getSortingValues() {
+		$sorting = $this->travelperk->expenses()->invoices()->sorting();
 		write_output("sorting", [
 			$sorting,
 		]);
 	}
 
-	private function getInvoiceProfiles($travelperk) {
-		$profiles = $travelperk->expenses()->invoiceProfiles()->query()->setOffset(1)->setLimit(10)->get();
+	private function getInvoiceProfiles() {
+		$profiles = $this->travelperk->expenses()->invoiceProfiles()->query()->setOffset(1)->setLimit(10)->get();
 		write_output("profiles", [
 			$profiles->offset,
 			$profiles->limit,
