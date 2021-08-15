@@ -1,15 +1,16 @@
 from utils import write_output
+from test_base import TestBase
 
 
-class TripsTests:
-    def run(self, travelperk):
+class TripsTests(TestBase):
+    def run(self):
         print("List trips")
-        self.list_trips(travelperk)
+        self.list_trips()
         print("Get bookings")
-        self.list_bookings(travelperk)
+        self.list_bookings()
 
-    def list_trips(self, travelperk):
-        trips = travelperk.trips().trips().query().set_offset(1).set_limit(10).get()
+    def list_trips(self):
+        trips = self.travelperk.trips().trips().query().set_offset(1).set_limit(10).get()
         write_output("trips", [
             trips.offset,
             trips.limit,
@@ -29,8 +30,8 @@ class TripsTests:
             trips.trips[9].modified,
         ])
 
-    def list_bookings(self, travelperk):
-        bookings = travelperk.trips().bookings().query().set_offset(1).set_limit(10).get()
+    def list_bookings(self):
+        bookings = self.travelperk.trips().bookings().query().set_offset(1).set_limit(10).get()
         write_output("bookings", [
             bookings.offset,
             bookings.limit,

@@ -1,23 +1,24 @@
 from utils import write_output
+from test_base import TestBase
 
 
-class WebhooksTests:
-    def run(self, travelperk):
+class WebhooksTests(TestBase):
+    def run(self):
         print("List webhooks")
-        self.list_webhooks(travelperk)
+        self.list_webhooks()
         print("Get webhook")
-        self.get_webhook(travelperk)
+        self.get_webhook()
         print("Test webhook")
-        self.test_webhook(travelperk)
+        self.test_webhook()
         print("Create webhook")
-        webhook_id = self.create_webhook(travelperk)
+        webhook_id = self.create_webhook()
         print("Update webhook")
-        self.update_webhook(travelperk, webhook_id)
+        self.update_webhook(webhook_id)
         print("Delete webhook")
-        self.delete_webhook(travelperk, webhook_id)
+        self.delete_webhook(webhook_id)
 
-    def list_webhooks(self, travelperk):
-        webhooks = travelperk.webhooks().webhooks().all()
+    def list_webhooks(self):
+        webhooks = self.travelperk.webhooks().webhooks().all()
         write_output("webhooks", [
             webhooks.webhooks,
             webhooks.webhooks[0].id,
@@ -32,8 +33,8 @@ class WebhooksTests:
             webhooks.webhooks[0].error_rate,
         ])
 
-    def get_webhook(self, travelperk):
-        webhook = travelperk.webhooks().webhooks().get("b4ab65a2-31b6-4cf8-9cfb-f0788c47f7c7")
+    def get_webhook(self):
+        webhook = self.travelperk.webhooks().webhooks().get("b4ab65a2-31b6-4cf8-9cfb-f0788c47f7c7")
         write_output("webhook", [
             webhook.id,
             webhook.enabled,
@@ -47,11 +48,11 @@ class WebhooksTests:
             webhook.error_rate,
         ])
 
-    def test_webhook(self, travelperk):
-        travelperk.webhooks().webhooks().test("b4ab65a2-31b6-4cf8-9cfb-f0788c47f7c7")
+    def test_webhook(self):
+        self.travelperk.webhooks().webhooks().test("b4ab65a2-31b6-4cf8-9cfb-f0788c47f7c7")
 
-    def create_webhook(self, travelperk):
-        webhook = travelperk.webhooks().webhooks().create(
+    def create_webhook(self):
+        webhook = self.travelperk.webhooks().webhooks().create(
             "test",
             "https://test.namelivia.com",
             "SomeTestingSecret",
@@ -71,8 +72,8 @@ class WebhooksTests:
         ])
         return webhook.id
 
-    def update_webhook(self, travelperk, webhook_id):
-        webhook = travelperk.webhooks().webhooks().modify(webhook_id).set_enabled(False).save()
+    def update_webhook(self, webhook_id):
+        webhook = self.travelperk.webhooks().webhooks().modify(webhook_id).set_enabled(False).save()
         write_output("update_webhook", [
             # webhook.id, Id will be new every time
             webhook.enabled,
@@ -86,5 +87,5 @@ class WebhooksTests:
             webhook.error_rate,
         ])
 
-    def delete_webhook(self, travelperk, webhook_id):
-        travelperk.webhooks().webhooks().delete(webhook_id)
+    def delete_webhook(self, webhook_id):
+        self.travelperk.webhooks().webhooks().delete(webhook_id)

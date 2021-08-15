@@ -10,8 +10,19 @@ from test_users import UsersTests
 travelperk = build(os.environ["API_KEY"], False)
 sandbox_travelperk = build(os.environ["SANDBOX_API_KEY"], True)
 
-sandbox_tests = [ExpensesTests(), SCIMTests(), CostCentersTests()]
-[test.run(sandbox_travelperk) for test in sandbox_tests]
-
-tests = [WebhooksTests(), TripsTests(), TravelsafeTests(), UsersTests()]
-[test.run(travelperk) for test in tests]
+tests = [
+    # Sandbox - Api key
+    ExpensesTests(sandbox_travelperk),
+    SCIMTests(sandbox_travelperk),
+    CostCentersTests(sandbox_travelperk),
+    # Api key
+    WebhooksTests(travelperk),
+    TripsTests(travelperk),
+    TravelsafeTests(travelperk),
+    UsersTests(travelperk),
+]
+for test in tests:
+    try:
+        test.run()
+    except Exception as e:
+        print(str(e))

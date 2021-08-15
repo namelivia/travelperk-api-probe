@@ -1,13 +1,14 @@
 from utils import write_output
+from test_base import TestBase
 
 
-class UsersTests:
-    def run(self, travelperk):
+class UsersTests(TestBase):
+    def run(self):
         print("List users (non SCIM)")
-        self.get_users(travelperk)
+        self.get_users()
 
-    def get_users(self, travelperk):
-        users = travelperk.users().users().query().set_offset(1).set_limit(10).get()
+    def get_users(self):
+        users = self.travelperk.users().users().query().set_offset(1).set_limit(10).get()
         write_output("users", [
             users.offset,
             users.limit,

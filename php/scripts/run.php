@@ -10,7 +10,6 @@ require_once("test_users.php");
 use Namelivia\TravelPerk\ServiceProvider;
 use kamermans\OAuth2\Persistence\FileTokenPersistence;
 
-# Test the sandbox environment
 $sandboxTravelperkApiKey = (new ServiceProvider())->build(getenv("SANDBOX_API_KEY"), true);
 $travelperkApiKey = (new ServiceProvider())->build(getenv("API_KEY"), false);
 $travelperkOAuth = (new ServiceProvider())->buildOAuth2(

@@ -1,20 +1,21 @@
 from utils import write_output
 import datetime
+from test_base import TestBase
 
 
-class TravelsafeTests:
-    def run(self, travelperk):
+class TravelsafeTests(TestBase):
+    def run(self):
         print("Get travel restrictions")
-        self.get_travel_restrictions(travelperk)
+        self.get_travel_restrictions()
         print("Get local summary")
-        self.get_local_summary(travelperk)
+        self.get_local_summary()
         print("Get airline safety measures")
-        self.get_airline_safety_measures(travelperk)
+        self.get_airline_safety_measures()
         print("Get location types")
-        self.get_location_types(travelperk)
+        self.get_location_types()
 
-    def get_travel_restrictions(self, travelperk):
-        restriction = travelperk.travelsafe().travelsafe().travel_restrictions(
+    def get_travel_restrictions(self):
+        restriction = self.travelperk.travelsafe().travelsafe().travel_restrictions(
             "ES", "FR", "country_code", "country_code", datetime.date.today()
         )
         write_output("travel_restrictions", [
@@ -42,8 +43,8 @@ class TravelsafeTests:
             restriction.requirements[0].documents,
         ])
 
-    def get_local_summary(self, travelperk):
-        local_summary = travelperk.travelsafe().travelsafe().local_summary(
+    def get_local_summary(self):
+        local_summary = self.travelperk.travelsafe().travelsafe().local_summary(
             "ES", "country_code"
         )
         write_output("local_summary", [
@@ -66,8 +67,8 @@ class TravelsafeTests:
             local_summary.guidelines[0].severity,
         ])
 
-    def get_airline_safety_measures(self, travelperk):
-        safety_measure = travelperk.travelsafe().travelsafe().airline_safety_measures(
+    def get_airline_safety_measures(self):
+        safety_measure = self.travelperk.travelsafe().travelsafe().airline_safety_measures(
             "LH"
         )
         write_output("safety_measures", [
@@ -85,8 +86,8 @@ class TravelsafeTests:
             safety_measure.updated_at,
         ])
 
-    def get_location_types(self, travelperk):
-        location_types = travelperk.travelsafe().travelsafe().location_types()
+    def get_location_types(self):
+        location_types = self.travelperk.travelsafe().travelsafe().location_types()
         write_output("location_types", [
             location_types
         ])

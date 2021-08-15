@@ -1,28 +1,29 @@
 from utils import write_output
+from test_base import TestBase
 
 
-class ExpensesTests:
-    def run(self, travelperk):
+class ExpensesTests(TestBase):
+    def run(self):
         print("List invoices")
-        self.list_invoices(travelperk)
+        self.list_invoices()
         print("Get invoice")
-        self.get_invoice(travelperk)
+        self.get_invoice()
         # TODO: This is crashing
         # print("Get invoice PDF")
         # self.get_invoice_pdf(travelperk)
         print("List invoice lines")
-        self.list_invoice_lines(travelperk)
+        self.list_invoice_lines()
         print("Get billing periods")
-        self.get_billing_periods(travelperk)
+        self.get_billing_periods()
         print("Get statuses")
-        self.get_statuses(travelperk)
+        self.get_statuses()
         print("Get sorting values")
-        self.get_sorting_values(travelperk)
+        self.get_sorting_values()
         print("Get invoice profiles")
-        self.get_invoice_profiles(travelperk)
+        self.get_invoice_profiles()
 
-    def list_invoices(self, travelperk):
-        invoices = travelperk.expenses().invoices().query().set_offset(1).set_limit(10).get()
+    def list_invoices(self):
+        invoices = self.travelperk.expenses().invoices().query().set_offset(1).set_limit(10).get()
         write_output("invoices", [
             invoices.offset,
             invoices.limit,
@@ -57,8 +58,8 @@ class ExpensesTests:
             invoices.invoices[0].pdf[0:40]  # This link will change every time
         ])
 
-    def get_invoice(self, travelperk):
-        invoice = travelperk.expenses().invoices().get("CR-01-2")
+    def get_invoice(self):
+        invoice = self.travelperk.expenses().invoices().get("CR-01-2")
         write_output("invoice", [
             invoice.serial_number,
             invoice.profile_id,
@@ -118,14 +119,14 @@ class ExpensesTests:
             invoice.lines.data[0].metadata.booker.external_id,
         ])
 
-    def get_invoice_pdf(self, travelperk):
-        invoice_pdf = travelperk.expenses().invoices().pdf("CR-01-2")
+    def get_invoice_pdf(self):
+        invoice_pdf = self.travelperk.expenses().invoices().pdf("CR-01-2")
         write_output("invoice_pdf", [
             invoice_pdf,
         ])
 
-    def list_invoice_lines(self, travelperk):
-        lines = travelperk.expenses().invoices().lines_query().set_offset(1).set_limit(10).get()
+    def list_invoice_lines(self):
+        lines = self.travelperk.expenses().invoices().lines_query().set_offset(1).set_limit(10).get()
         write_output("invoice_lines", [
             lines.total,
             lines.offset,
@@ -169,26 +170,26 @@ class ExpensesTests:
             lines.invoice_lines[0].currency,
         ])
 
-    def get_billing_periods(self, travelperk):
-        billing_periods = travelperk.expenses().invoices().billing_periods()
+    def get_billing_periods(self):
+        billing_periods = self.travelperk.expenses().invoices().billing_periods()
         write_output("billing_periods", [
             billing_periods
         ])
 
-    def get_statuses(self, travelperk):
-        statuses = travelperk.expenses().invoices().statuses()
+    def get_statuses(self):
+        statuses = self.travelperk.expenses().invoices().statuses()
         write_output("statuses", [
             statuses
         ])
 
-    def get_sorting_values(self, travelperk):
-        sorting = travelperk.expenses().invoices().sorting()
+    def get_sorting_values(self):
+        sorting = self.travelperk.expenses().invoices().sorting()
         write_output("sorting", [
             sorting,
         ])
 
-    def get_invoice_profiles(self, travelperk):
-        profiles = travelperk.expenses().invoice_profiles().query().set_offset(1).set_limit(10).get()
+    def get_invoice_profiles(self):
+        profiles = self.travelperk.expenses().invoice_profiles().query().set_offset(1).set_limit(10).get()
         write_output("profiles", [
             profiles.offset,
             profiles.limit,

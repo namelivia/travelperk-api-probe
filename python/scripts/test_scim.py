@@ -1,33 +1,34 @@
 from utils import write_output
+from test_base import TestBase
 
 
-class SCIMTests:
-    def run(self, travelperk):
+class SCIMTests(TestBase):
+    def run(self):
         print("Get service provider configuration")
-        self.get_service_provider_config(travelperk)
+        self.get_service_provider_config()
         print("Get resources types")
-        self.get_resource_types(travelperk)
+        self.get_resource_types()
         print("Get user schema")
-        self.get_user_schema(travelperk)
+        self.get_user_schema()
         print("Get enterprise schema")
-        self.get_enterprise_schema(travelperk)
+        self.get_enterprise_schema()
         print("List users")
-        self.list_users(travelperk)
+        self.list_users()
         print("Get user")
-        self.get_user(travelperk)
+        self.get_user()
         print("Create user")
-        user_id = self.create_user(travelperk)
+        user_id = self.create_user()
         print("Replace user")
-        self.replace_user(travelperk, user_id)
+        self.replace_user(user_id)
         print("Delete user")
-        self.delete_user(travelperk, user_id)
+        self.delete_user(user_id)
         print("Get genders")
-        self.get_genders(travelperk)
+        self.get_genders()
         print("Get languages")
-        self.get_languages(travelperk)
+        self.get_languages()
 
-    def get_service_provider_config(self, travelperk):
-        config = travelperk.scim().discovery().service_provider_config()
+    def get_service_provider_config(self):
+        config = self.travelperk.scim().discovery().service_provider_config()
         write_output("service_provider_config", [
             config["schemas"][0],
             config["patch"]["supported"],
@@ -49,8 +50,8 @@ class SCIMTests:
             config["meta"]["resourceType"],
         ])
 
-    def get_resource_types(self, travelperk):
-        resource_types = travelperk.scim().discovery().resource_types()
+    def get_resource_types(self):
+        resource_types = self.travelperk.scim().discovery().resource_types()
         write_output("list_resource_types", [
             resource_types["totalResults"],
             resource_types["itemsPerPage"],
@@ -70,8 +71,8 @@ class SCIMTests:
             resource_types["Resources"][0]["meta"]["location"],
         ])
 
-    def get_user_schema(self, travelperk):
-        user_schema = travelperk.scim().discovery().user_schema()
+    def get_user_schema(self):
+        user_schema = self.travelperk.scim().discovery().user_schema()
         write_output("user_schema", [
             user_schema["id"],
             user_schema["name"],
@@ -81,8 +82,8 @@ class SCIMTests:
             user_schema["meta"]["location"],
         ])
 
-    def get_enterprise_schema(self, travelperk):
-        enterprise_schema = travelperk.scim().discovery().enterprise_user_schema()
+    def get_enterprise_schema(self):
+        enterprise_schema = self.travelperk.scim().discovery().enterprise_user_schema()
         write_output("enterprise_schema", [
             enterprise_schema["id"],
             enterprise_schema["name"],
@@ -92,8 +93,8 @@ class SCIMTests:
             enterprise_schema["meta"]["location"],
         ])
 
-    def list_users(self, travelperk):
-        users = travelperk.scim().users().query().set_start_index(1).set_count(10).get()
+    def list_users(self):
+        users = self.travelperk.scim().users().query().set_start_index(1).set_count(10).get()
         write_output("scim_users", [
             users.schemas[0],
             users.total_results,
@@ -126,8 +127,8 @@ class SCIMTests:
             users.resources[0].travelperk_extension.approvers,
         ])
 
-    def get_user(self, travelperk):
-        user = travelperk.scim().users().get(2)
+    def get_user(self):
+        user = self.travelperk.scim().users().get(2)
         write_output("user", [
             user.schemas[0],
             user.schemas[1],
@@ -155,8 +156,8 @@ class SCIMTests:
             user.travelperk_extension.approvers,
         ])
 
-    def create_user(self, travelperk):
-        user = travelperk.scim().users().make(
+    def create_user(self):
+        user = self.travelperk.scim().users().make(
             'test@api.probe',
             True,
             'Test',
@@ -191,8 +192,8 @@ class SCIMTests:
         ])
         return user.id
 
-    def replace_user(self, travelperk, user_id):
-        user = travelperk.scim().users().modify(
+    def replace_user(self, user_id):
+        user = self.travelperk.scim().users().modify(
             user_id,
             'replaced@api.probe',
             True,
@@ -227,18 +228,18 @@ class SCIMTests:
             user.travelperk_extension.approvers,
         ])
 
-    def delete_user(self, travelperk, user_id):
+    def delete_user(self, user_id):
         # This operation returns nothing
-        travelperk.scim().users().delete(user_id)
+        self.travelperk.scim().users().delete(user_id)
 
-    def get_genders(self, travelperk):
-        genders = travelperk.scim().users().genders()
+    def get_genders(self):
+        genders = self.travelperk.scim().users().genders()
         write_output("genders", [
             genders,
         ])
 
-    def get_languages(self, travelperk):
-        languages = travelperk.scim().users().languages()
+    def get_languages(self):
+        languages = self.travelperk.scim().users().languages()
         write_output("languages", [
             languages,
         ])
