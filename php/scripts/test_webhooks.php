@@ -1,31 +1,36 @@
 <?php
 require_once(__DIR__."/../vendor/autoload.php");
 require_once("utils.php");
+require_once("test_base.php");
 use Namelivia\TravelPerk\ServiceProvider;
 
-class WebhooksTests {
+class WebhooksTests extends TestBase {
 
-	public function run($travelperk) {
+	public function __construct($travelperk) {
+		parent::__construct($travelperk);
+	}
+
+	public function run() {
 		echo ("List webhooks\n");
-		$this->listWebhooks($travelperk);
+		$this->listWebhooks();
 		echo ("Get webhook\n");
-		$this->getWebhook($travelperk);
+		$this->getWebhook();
 		echo ("Test webhook\n");
-		$this->testWebhook($travelperk);
+		$this->testWebhook();
 		echo ("Create webhook\n");
-		$id = $this->createWebhook($travelperk);
+		$id = $this->createWebhook();
 		echo ("Update webhook\n");
-		$this->updateWebhook($travelperk, $id);
+		$this->updateWebhook($id);
 		echo ("Delete webhook\n");
-		$this->deleteWebhook($travelperk, $id);
+		$this->deleteWebhook($id);
 	}
 
-	private function testWebhook($travelperk) {
-		$travelperk->webhooks()->webhooks()->test("b4ab65a2-31b6-4cf8-9cfb-f0788c47f7c7");
+	private function testWebhook() {
+		$this->travelperk->webhooks()->webhooks()->test("b4ab65a2-31b6-4cf8-9cfb-f0788c47f7c7");
 	}
 
-	private function getWebhook($travelperk) {
-		$webhook = $travelperk->webhooks()->webhooks()->get("b4ab65a2-31b6-4cf8-9cfb-f0788c47f7c7");
+	private function getWebhook() {
+		$webhook = $this->travelperk->webhooks()->webhooks()->get("b4ab65a2-31b6-4cf8-9cfb-f0788c47f7c7");
 		write_output("webhook", [
 			$webhook->id,
 			$webhook->enabled,
@@ -40,8 +45,8 @@ class WebhooksTests {
 		]);
 	}
 
-	private function listWebhooks($travelperk) {
-		$webhooks = $travelperk->webhooks()->webhooks()->all();
+	private function listWebhooks() {
+		$webhooks = $this->travelperk->webhooks()->webhooks()->all();
 		write_output("webhooks", [
 			$webhooks->webhooks,
 			$webhooks->webhooks[0]->id,
@@ -57,8 +62,8 @@ class WebhooksTests {
 		]);
 	}
 
-	private function createWebhook($travelperk) {
-		$webhook = $travelperk->webhooks()->webhooks()->create(
+	private function createWebhook() {
+		$webhook = $this->travelperk->webhooks()->webhooks()->create(
 			"test",
 			"https://test.namelivia.com",
 			"SomeTestingSecret",
@@ -79,8 +84,8 @@ class WebhooksTests {
 		return $webhook->id;
 	}
 
-	private function updateWebhook($travelperk, $id) {
-		$webhook = $travelperk->webhooks()->webhooks()->modify(
+	private function updateWebhook($id) {
+		$webhook = $this->travelperk->webhooks()->webhooks()->modify(
 			$id
 		)->setEnabled(false)->save();
 		write_output("update_webhook", [
@@ -97,8 +102,8 @@ class WebhooksTests {
 		]);
 	}
 
-	private function deleteWebhook($travelperk, $id) {
-		$travelperk->webhooks()->webhooks()->delete(
+	private function deleteWebhook($id) {
+		$this->travelperk->webhooks()->webhooks()->delete(
 			$id
 		);
 	}

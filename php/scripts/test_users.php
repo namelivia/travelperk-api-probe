@@ -1,17 +1,22 @@
 <?php
 require_once(__DIR__."/../vendor/autoload.php");
 require_once("utils.php");
+require_once("test_base.php");
 use Namelivia\TravelPerk\ServiceProvider;
 
-class UsersTests {
+class UsersTests extends TestBase {
 
-	public function run($travelperk) {
-		echo ("List users (non SCIM)\n");
-		$this->getUsers($travelperk);
+	public function __construct($travelperk) {
+		parent::__construct($travelperk);
 	}
 
-	private function getUsers($travelperk) {
-		$users = $travelperk->users()->users()->query()->setOffset(1)->setLimit(10)->get();
+	public function run() {
+		echo ("List users (non SCIM)\n");
+		$this->getUsers();
+	}
+
+	private function getUsers() {
+		$users = $this->travelperk->users()->users()->query()->setOffset(1)->setLimit(10)->get();
 		write_output("users", [
 			$users->offset,
 			$users->limit,

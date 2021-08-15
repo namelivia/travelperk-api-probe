@@ -1,19 +1,24 @@
 <?php
 require_once(__DIR__."/../vendor/autoload.php");
 require_once("utils.php");
+require_once("test_base.php");
 use Namelivia\TravelPerk\ServiceProvider;
 
-class TripsTests {
+class TripsTests extends TestBase {
 
-	public function run($travelperk) {
-		echo ("List trips\n");
-		$this->listTrips($travelperk);
-		echo ("List bookings\n");
-		$this->listBookings($travelperk);
+	public function __construct($travelperk) {
+		parent::__construct($travelperk);
 	}
 
-	private function listTrips($travelperk) {
-		$trips = $travelperk->trips()->trips()->query()->setOffset(1)->setLimit(10)->get();
+	public function run() {
+		echo ("List trips\n");
+		$this->listTrips();
+		echo ("List bookings\n");
+		$this->listBookings();
+	}
+
+	private function listTrips() {
+		$trips = $this->travelperk->trips()->trips()->query()->setOffset(1)->setLimit(10)->get();
 		write_output("trips", [
 			$trips->offset,
 			$trips->limit,
@@ -34,8 +39,8 @@ class TripsTests {
 		]);
 	}
 
-	private function listBookings($travelperk) {
-		$bookings = $travelperk->trips()->bookings()->query()->setOffset(1)->setLimit(10)->get();
+	private function listBookings() {
+		$bookings = $this->travelperk->trips()->bookings()->query()->setOffset(1)->setLimit(10)->get();
 		write_output("bookings", [
 			$bookings->offset,
 			$bookings->limit,

@@ -1,24 +1,29 @@
 <?php
 require_once(__DIR__."/../vendor/autoload.php");
 require_once("utils.php");
+require_once("test_base.php");
 use Namelivia\TravelPerk\ServiceProvider;
 use Carbon\Carbon;
 
-class TravelsafeTests {
+class TravelsafeTests extends TestBase {
 
-	public function run($travelperk) {
-		echo ("Get travel restrictions\n");
-		$this->getTravelRestrictions($travelperk);
-		echo ("Get local summary\n");
-		$this->getLocalSummary($travelperk);
-		echo ("Get airline safety measures\n");
-		$this->getAirlineSafetyMeasures($travelperk);
-		echo ("Get location types\n");
-		$this->getLocationTypes($travelperk);
+	public function __construct($travelperk) {
+		parent::__construct($travelperk);
 	}
 
-	private function getTravelRestrictions($travelperk) {
-		$restriction = $travelperk->travelSafe()->travelSafe()->travelRestrictions(
+	public function run() {
+		echo ("Get travel restrictions\n");
+		$this->getTravelRestrictions();
+		echo ("Get local summary\n");
+		$this->getLocalSummary();
+		echo ("Get airline safety measures\n");
+		$this->getAirlineSafetyMeasures();
+		echo ("Get location types\n");
+		$this->getLocationTypes();
+	}
+
+	private function getTravelRestrictions() {
+		$restriction = $this->travelperk->travelSafe()->travelSafe()->travelRestrictions(
 			"ES",
 			"FR",
 			"country_code",
@@ -51,9 +56,8 @@ class TravelsafeTests {
 		]);
 	}
 
-	private function getLocalSummary($travelperk) {
-		xdebug_break();
-		$summary = $travelperk->travelSafe()->travelSafe()->localSummary(
+	private function getLocalSummary() {
+		$summary = $this->travelperk->travelSafe()->travelSafe()->localSummary(
 			"ES",
 			"country_code",
 		);
@@ -78,8 +82,8 @@ class TravelsafeTests {
 		]);
 	}
 
-	private function getAirlineSafetyMeasures($travelperk) {
-		$safetyMeasure = $travelperk->travelSafe()->travelSafe()->airlineSafetyMeasures(
+	private function getAirlineSafetyMeasures() {
+		$safetyMeasure = $this->travelperk->travelSafe()->travelSafe()->airlineSafetyMeasures(
 			"LH",
 		);
 		write_output("safety_measures", [
@@ -98,8 +102,8 @@ class TravelsafeTests {
 		]);
 	}
 
-	private function getLocationTypes($travelperk) {
-		$locationTypes = $travelperk->travelSafe()->travelSafe()->locationTypes();
+	private function getLocationTypes() {
+		$locationTypes = $this->travelperk->travelSafe()->travelSafe()->locationTypes();
 		write_output("location_types", [
 			$locationTypes
 		]);

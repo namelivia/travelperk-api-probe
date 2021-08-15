@@ -12,22 +12,6 @@ use kamermans\OAuth2\Persistence\FileTokenPersistence;
 
 # Test the sandbox environment
 $sandboxTravelperkApiKey = (new ServiceProvider())->build(getenv("SANDBOX_API_KEY"), true);
-$sandboxTests = [
-	new ExpensesTests($sandboxTravelperkApiKey),
-	new SCIMTests($sandboxTravelperkApiKey),
-	new CostCentersTests($sandboxTravelperkApiKey)
-];
-foreach ($sandboxTests as $test) {
-	$test->run();
-}
-
-# Test the regular environment
-$tests = [
-	new WebhooksTests(),
-	new TripsTests(),
-	new TravelsafeTests(),
-	new UsersTests()
-];
 $travelperkApiKey = (new ServiceProvider())->build(getenv("API_KEY"), false);
 $travelperkOAuth = (new ServiceProvider())->buildOAuth2(
     new FileTokenPersistence(getenv("ACCESS_TOKEN_PATH")),
@@ -37,16 +21,28 @@ $travelperkOAuth = (new ServiceProvider())->buildOAuth2(
 	[], # scopes
 	false
 );
+
+$tests = [
+	# Sandbox - Api key
+	new ExpensesTests($sandboxTravelperkApiKey),
+	new SCIMTests($sandboxTravelperkApiKey),
+	new CostCentersTests($sandboxTravelperkApiKey),
+	# Api key
+	new WebhooksTests($travelperkApiKey),
+	new TripsTests($travelperkApiKey),
+	new TravelsafeTests($travelperkApiKey),
+	new UsersTests($travelperkApiKey),
+	# OAuth
+	new WebhooksTests($travelperkOAuth),
+	new TripsTests($travelperkOAuth),
+	new TravelsafeTests($travelperkOAuth),
+	new UsersTests($travelperkOAuth),
+];
+
 foreach ($tests as $test) {
 	try {
-		$test->run($travelperkApiKey);
+		$test->run();
 	} catch (Exception $e) {
 		echo($e->getMessage() . "\n");
 	}
-	try {
-		$test->run($travelperkOAuth);
-	} catch (Exception $e) {
-		echo($e->getMessage() . "\n");
-	}
-	
 }
