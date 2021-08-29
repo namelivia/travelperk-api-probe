@@ -11,6 +11,10 @@ services:
     environment:
       API_KEY: ${API_KEY}
       SANDBOX_API_KEY: ${SANDBOX_API_KEY}
+      CLIENT_ID: ${CLIENT_ID}
+      CLIENT_SECRET: ${CLIENT_SECRET}
+      REDIRECT_URL: ${REDIRECT_URL}
+      ACCESS_TOKEN_PATH: ${ACCESS_TOKEN_PATH}
     volumes:
       - ./:/usr/src/app
       - vendor:/usr/src/app/vendor
