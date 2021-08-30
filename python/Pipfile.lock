@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e3753a738a2fc9ddd1bb385474052d47db503fd6814bb8b20035a745016fc1ad"
+            "sha256": "0d8999e65a498da6de4171241049c21e9c88a5af81c0b0ced856134270a75d8f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -95,22 +95,27 @@
             "version": "==1.3.0"
         },
         "travelperk-http-python": {
-            "editable": true,
-            "git": "https://github.com/namelivia/travelperk-http-python.git",
-            "ref": "90f0cf082934a506266cc1afca939cf96e4e3c2a"
+            "hashes": [
+                "sha256:bb69bf334e155c59e1f1f1cb0a5b096310fec1c694bdcafec9b1adb4e65d4a35",
+                "sha256:e37c6601c2b1b9fe2f48f0a3d555cfe2af5d128489381b1e28274eb905d58521"
+            ],
+            "index": "pypi",
+            "version": "==1.0.3"
         },
         "travelperk-python-api-types": {
-            "editable": true,
-            "git": "https://github.com/namelivia/travelperk-python-api-types.git",
-            "ref": "34ebf127e406a2597749bd0fd6901cce885dff9b"
+            "hashes": [
+                "sha256:7986d7e688265603712142b373fc57bc404dd27746779015a166f18cc510bc53",
+                "sha256:896aed152d32783b67351788a733849b309dfe4e2baa4de752a07837ba26fa47"
+            ],
+            "version": "==1.0.31"
         },
         "typing-extensions": {
             "hashes": [
-                "sha256:0ac0f89795dd19de6b97debb0c6af1c70987fd80a2d62d1958f7e56fcc31b497",
-                "sha256:50b6f157849174217d0656f99dc82fe932884fb250826c18350e159ec6cdf342",
-                "sha256:779383f6086d90c99ae41cf0ff39aac8a7937a9283ce0a414e5dd782f4c94a84"
+                "sha256:045dd532231acfa03628df5e0c66dba64e2cc8fc8b844538d4ad6d5dd6cb82dc",
+                "sha256:83af6730a045fda60f46510f7f1f094776d90321caa4d97d20ef38871bef4bd3",
+                "sha256:8bbffbd37fbeb9747a0241fdfde5ae99d4531ad1d1a41ccaea62100e15a5814c"
             ],
-            "version": "==3.10.0.0"
+            "version": "==3.10.0.1"
         },
         "urllib3": {
             "hashes": [
