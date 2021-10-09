@@ -47,7 +47,7 @@ class CostCentersTests extends TestBase {
 	}
 
 	private function getCostCenter() {
-		$costCenter = $this->travelperk->costCenters()->costCenters()->get("1");
+		$costCenter = $this->travelperk->costCenters()->costCenters()->get("37");
 		write_output("cost_center", [
 			$costCenter->id,
 			$costCenter->name,
@@ -64,8 +64,8 @@ class CostCentersTests extends TestBase {
 	}
 
 	private function updateCostCenter() {
-		$originalCostCenter = $this->travelperk->costCenters()->costCenters()->get("1");
-		$costCenter = $this->travelperk->costCenters()->costCenters()->modify("1")->setName("Updated name by api probe")->save();
+		$originalCostCenter = $this->travelperk->costCenters()->costCenters()->get("37");
+		$costCenter = $this->travelperk->costCenters()->costCenters()->modify("37")->setName("Updated name by api probe")->save();
 		write_output("updated_cost_center", [
 			$costCenter->id,
 			$costCenter->name,
@@ -79,26 +79,26 @@ class CostCentersTests extends TestBase {
 			$costCenter->users[0]->phone,
 			$costCenter->users[0]->profilePicture,
 		]);
-		$this->travelperk->costCenters()->costCenters()->modify("1")->setName($originalCostCenter->name)->save();
+		$this->travelperk->costCenters()->costCenters()->modify("37")->setName($originalCostCenter->name)->save();
 	}
 
 	private function bulkUpdate()
 	{
-		$response = $this->travelperk->costCenters()->costCenters()->bulkUpdate()->setIds([1, 2])
+		$response = $this->travelperk->costCenters()->costCenters()->bulkUpdate()->setIds([38, 39])
 			->setArchive(True)->save();
 		write_output("bulk_update_cost_center", [
 			$response->updatedCount,
 		]);
-		$response = $this->travelperk->costCenters()->costCenters()->bulkUpdate()->setIds([1, 2])
+		$response = $this->travelperk->costCenters()->costCenters()->bulkUpdate()->setIds([38, 39])
 			->setArchive(False)->save();
 	}
 
 	private function setUsers() {
-		$costCenter = $this->travelperk->costCenters()->costCenters()->get("1");
+		$costCenter = $this->travelperk->costCenters()->costCenters()->get("37");
 		$originalUsers = array_map(function ($user) {
 			return $user->id;
 		}, $costCenter->users);
-		$costCenter = $this->travelperk->costCenters()->costCenters()->setUsers("1")->setIds(["65", "34"])->save();
+		$costCenter = $this->travelperk->costCenters()->costCenters()->setUsers("37")->setIds(["165", "166"])->save();
 		write_output("set_users_for_cost_center", [
 			$costCenter->id,
 			$costCenter->name,
@@ -112,6 +112,6 @@ class CostCentersTests extends TestBase {
 			$costCenter->users[0]->phone,
 			$costCenter->users[0]->profilePicture,
 		]);
-		$this->travelperk->costCenters()->costCenters()->setUsers("1")->setIds($originalUsers)->save();
+		$this->travelperk->costCenters()->costCenters()->setUsers("37")->setIds($originalUsers)->save();
 	}
 }

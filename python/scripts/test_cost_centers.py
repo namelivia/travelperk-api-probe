@@ -29,7 +29,7 @@ class CostCentersTests(TestBase):
         ])
 
     def get_cost_center(self):
-        cost_center = self.travelperk.cost_centers().cost_centers().get("1")
+        cost_center = self.travelperk.cost_centers().cost_centers().get("37")
         write_output("cost_center", [
             cost_center.id,
             cost_center.name,
@@ -45,8 +45,8 @@ class CostCentersTests(TestBase):
         ])
 
     def update_cost_center(self):
-        original_cost_center = self.travelperk.cost_centers().cost_centers().get("1")
-        cost_center = self.travelperk.cost_centers().cost_centers().modify("1").set_name(
+        original_cost_center = self.travelperk.cost_centers().cost_centers().get("37")
+        cost_center = self.travelperk.cost_centers().cost_centers().modify("37").set_name(
             "Updated name by api probe"
         ).save()
         write_output("updated_cost_center", [
@@ -62,7 +62,7 @@ class CostCentersTests(TestBase):
             cost_center.users[0].phone,
             cost_center.users[0].profile_picture,
         ])
-        self.travelperk.cost_centers().cost_centers().modify("1").set_name(
+        self.travelperk.cost_centers().cost_centers().modify("37").set_name(
             original_cost_center.name
         ).save()
 
@@ -80,21 +80,21 @@ class CostCentersTests(TestBase):
 
     def bulk_update(self):
         response = self.travelperk.cost_centers().cost_centers().bulk_update().set_ids(
-            [1, 2]
+            [38, 39]
         ).set_archive(True).save()
         write_output("bulk_update_cost_center", [
             response.updated_count
         ])
         response = self.travelperk.cost_centers().cost_centers().bulk_update().set_ids(
-            [1, 2]
+            [38, 39]
         ).set_archive(False).save()
 
     def set_users(self):
-        cost_center = self.travelperk.cost_centers().cost_centers().get("1")
+        cost_center = self.travelperk.cost_centers().cost_centers().get("37")
         original_users = [user.id for user in cost_center.users]
         cost_center = self.travelperk.cost_centers().cost_centers().set_users(
-            "1"
-        ).set_ids([65, 34]).save()
+            "37"
+        ).set_ids([165, 166]).save()
         write_output("set_users_for_cost_center", [
             cost_center.id,
             cost_center.name,
@@ -108,6 +108,6 @@ class CostCentersTests(TestBase):
             cost_center.users[0].phone,
             cost_center.users[0].profile_picture,
         ])
-        self.travelperk.cost_centers().cost_centers().set_users("1").set_ids(
+        self.travelperk.cost_centers().cost_centers().set_users("37").set_ids(
             original_users
         ).save()

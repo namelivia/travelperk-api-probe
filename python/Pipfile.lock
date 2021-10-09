@@ -18,10 +18,10 @@
     "default": {
         "certifi": {
             "hashes": [
-                "sha256:2bbf76fd432960138b3ef6dda3dde0544f27cbf8546c458e60baf371917ba9ee",
-                "sha256:50b1e4f8446b06f41be7dd6338db18e0990601dce795c2b1686458aa7e8fa7d8"
+                "sha256:78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872",
+                "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"
             ],
-            "version": "==2021.5.30"
+            "version": "==2021.10.8"
         },
         "charset-normalizer": {
             "hashes": [
@@ -96,11 +96,11 @@
         },
         "travelperk-http-python": {
             "hashes": [
-                "sha256:4905ae50ee68444524eaf2f0b1092fb1bed15743efaf8282bc066932291a4dd1",
-                "sha256:a323a7c0af14b599abb3f35d10c9fab5d63acac3f7278feb15e6fc61302b93fd"
+                "sha256:0134abe0d38bb7dfb6ace280db22844159a5d35f0c613fa284d8e84b848ca29f",
+                "sha256:609fcfb47a3ddaaaa55a0d04a3403331b507fe4c748544a62a2ef10b9a4ff01d"
             ],
             "index": "pypi",
-            "version": "==1.0.8"
+            "version": "==1.0.9"
         },
         "travelperk-python-api-types": {
             "hashes": [
@@ -119,10 +119,10 @@
         },
         "urllib3": {
             "hashes": [
-                "sha256:39fb8672126159acb139a7718dd10806104dec1e2f0f6c88aab05d17df10c8d4",
-                "sha256:f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f"
+                "sha256:4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece",
+                "sha256:c4fdf4019605b6e5423637e01bc9fe4daef873709a7973e195ceba0a62bbc844"
             ],
-            "version": "==1.26.6"
+            "version": "==1.26.7"
         }
     },
     "develop": {
