@@ -1,4 +1,5 @@
 import os
+import logging
 from travelperk_http_python.builder.builder import build
 from test_webhooks import WebhooksTests
 from test_expenses import ExpensesTests
@@ -9,6 +10,8 @@ from test_scim import SCIMTests
 from test_users import UsersTests
 travelperk = build(os.environ["API_KEY"], False)
 sandbox_travelperk = build(os.environ["SANDBOX_API_KEY"], True)
+
+logging.basicConfig(level=logging.INFO)
 
 tests = [
     # Sandbox - Api key
