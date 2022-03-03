@@ -5,6 +5,7 @@ from test_webhooks import WebhooksTests
 from test_expenses import ExpensesTests
 from test_trips import TripsTests
 from test_travelsafe import TravelsafeTests
+from test_greenperk import GreenPerkTests
 from test_cost_centers import CostCentersTests
 from test_scim import SCIMTests
 from test_users import UsersTests
@@ -18,6 +19,7 @@ tests = [
     ExpensesTests(sandbox_travelperk),
     SCIMTests(sandbox_travelperk),
     CostCentersTests(sandbox_travelperk),
+    GreenPerkTests(sandbox_travelperk),
     # Api key
     WebhooksTests(travelperk),
     TripsTests(travelperk),
