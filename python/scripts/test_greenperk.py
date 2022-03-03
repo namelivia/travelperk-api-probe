@@ -50,6 +50,5 @@ class GreenPerkTests(TestBase):
             2
         )
         write_output("hotel_emissions", [
-            emissions.emissions.CO2e_kg,
-            emissions.distance_km,
+            emissions.emissions.CO2e_kg
         ])
