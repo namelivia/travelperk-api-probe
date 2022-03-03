@@ -7,6 +7,7 @@ require_once("test_travelsafe.php");
 require_once("test_cost_centers.php");
 require_once("test_scim.php");
 require_once("test_users.php");
+require_once("test_greenperk.php");
 use Namelivia\TravelPerk\ServiceProvider;
 
 $sandboxTravelperkApiKey = (new ServiceProvider())->build(getenv("SANDBOX_API_KEY"), true);
@@ -17,6 +18,7 @@ $tests = [
 	new ExpensesTests($sandboxTravelperkApiKey),
 	new SCIMTests($sandboxTravelperkApiKey),
 	new CostCentersTests($sandboxTravelperkApiKey),
+	new GreenPerkTests($sandboxTravelperkApiKey),
 	# Api key
 	new WebhooksTests($travelperkApiKey),
 	new TripsTests($travelperkApiKey),
