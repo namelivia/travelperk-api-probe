@@ -32,6 +32,7 @@ class TravelsafeTests(TestBase):
             restriction.end_date,
             restriction.updated_at,
             restriction.requirements,
+            '''
             restriction.requirements[0].category.id,
             restriction.requirements[0].category.name,
             restriction.requirements[0].sub_category.id,
@@ -41,6 +42,7 @@ class TravelsafeTests(TestBase):
             restriction.requirements[0].start_date,
             restriction.requirements[0].end_date,
             restriction.requirements[0].documents,
+            '''
         ])
 
     def get_local_summary(self):
